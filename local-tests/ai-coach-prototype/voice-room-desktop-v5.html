@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>一节 AI 教练课｜Lindsey</title>
+  <script>
+    if (location.protocol === 'file:') {
+      location.replace('http://127.0.0.1:4173/voice-room-desktop-v5.html');
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <style>
+    :root{--w:1440px;--h:900px;--ink:#29233c;--muted:#817b91;--line:#e7e3ef;--purple:#6b55dc;--pale:#f3f1ff;--green:#caff8e}*{box-sizing:border-box}body{margin:0;background:#ecebf3;color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif}.workspace{padding:28px 0 42px}.artboard{position:relative;width:var(--w);height:var(--h);margin:auto;overflow:hidden;border-radius:25px;background:#fbfaff;box-shadow:0 22px 60px #30275a33}.top{height:74px;padding:0 31px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:#fff}.brand{display:flex;align-items:center;gap:11px}.logo{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#846ff3,#543dc5);color:#fff;font-weight:900}.brand b{display:block;font-size:14px}.brand small,.course small{display:block;margin-top:3px;color:#918b9e;font-size:11px}.course{text-align:center}.course b{font-size:13px}.exit{border:1px solid #ded9e9;border-radius:10px;padding:9px 14px;background:#fff;color:#655e71;font:inherit;font-size:12px;cursor:pointer}.room{height:826px;display:grid;grid-template-columns:424px 1fr}.coach{position:relative;overflow:hidden;padding:27px 30px;background:linear-gradient(160deg,#30265f,#1e193f);color:#fff}.coach:after{content:"";position:absolute;right:-100px;bottom:-85px;width:270px;height:270px;border:1px solid #a898ff33;border-radius:50%;box-shadow:0 0 0 32px #a898ff0d,0 0 0 64px #a898ff08}.portrait{position:relative;z-index:1;width:258px;height:326px;margin:0 auto;overflow:hidden;border:1px solid #ffffff33;border-radius:22px;background:#fff;box-shadow:0 14px 38px #0f092d55}.portrait img{width:100%;height:100%;object-fit:cover;object-position:center top}.call-state{position:relative;z-index:1;display:flex;justify-content:center;align-items:center;gap:9px;margin-top:18px;color:#ded8ff;font-size:11px;letter-spacing:.1em;font-weight:900}.pulse{width:9px;height:9px;border-radius:50%;background:#b8ff72;box-shadow:0 0 0 6px #b8ff7220}.coach-card{position:relative;z-index:1;margin-top:14px;padding:16px 18px;border:1px solid #ffffff20;border-radius:16px;background:#ffffff10}.coach-card small{color:#c6bdf1;font-size:11px}.coach-card p{margin:8px 0 0;font-size:17px;font-weight:800;line-height:1.55}.source{position:absolute;z-index:1;right:30px;bottom:29px;left:30px;padding:14px 15px;border-radius:14px;background:#ffffff10;color:#d8d2f6;font-size:11px;line-height:1.65}.source b{display:block;margin-bottom:3px;color:#fff;font-size:12px}.chat{display:flex;min-width:0;padding:28px 38px 24px 37px;flex-direction:column}.heading{display:flex;align-items:flex-start;justify-content:space-between}.eyebrow{color:#7560e0;font-size:11px;font-weight:900;letter-spacing:.12em}.heading h1{margin:7px 0 0;font-size:22px;letter-spacing:-.4px}.heading p{margin:6px 0 0;color:var(--muted);font-size:12px}.save-note{padding:10px 12px;border-radius:12px;background:#f3f1ff;color:#6450cc;font-size:11px;font-weight:900;text-align:right}.save-note span{display:block;margin-top:3px;color:#9289b1;font-size:10px;font-weight:400}.task{display:flex;align-items:center;gap:15px;margin-top:21px;padding:14px 16px;border:1px solid #e6e1f2;border-radius:15px;background:#fff}.badge{min-width:78px;height:34px;display:grid;place-items:center;border-radius:11px;background:#eeeaff;color:#624dce;font-weight:900;font-size:11px;white-space:nowrap}.task b{font-size:13px}.task p{margin:4px 0 0;color:#7f788b;font-size:12px}.progress{display:flex;align-items:center;gap:8px;margin:14px 0 10px}.progress small{margin-right:4px;color:#7f788d;font-size:11px;font-weight:900}.bar{height:6px;flex:1;border-radius:8px;background:#e5e1ed}.bar.done,.bar.current{background:#725ddd}.bar.current{box-shadow:0 0 0 4px #725ddd19}.callbar{display:flex;flex:0 0 auto;align-items:center;gap:11px;margin-top:10px;padding:10px 11px 10px 15px;border:1px solid #ded9e9;border-radius:17px;background:#fff;box-shadow:0 7px 20px #2d255510}.ongoing{display:flex;align-items:center;gap:6px;color:#6352c9;font-size:11px;font-weight:900;white-space:nowrap}.ongoing i{width:7px;height:7px;border-radius:50%;background:#73d92d}.transcript{min-width:0;flex:1;color:#9b95a4;font-size:13px}.listen{border:0;border-radius:11px;padding:12px 14px;background:#f1effa;color:#6752d5;font:inherit;font-size:12px;font-weight:900;cursor:pointer}.finish{border:0;border-radius:11px;padding:12px 15px;background:#6b55dc;color:#fff;font:inherit;font-size:12px;font-weight:900;cursor:pointer}.pause{border:0;background:transparent;color:#827b90;font:inherit;font-size:12px;cursor:pointer}.export-controls{text-align:center;margin-top:18px}.export-controls button{border:0;border-radius:10px;padding:11px 18px;background:#29233c;color:#fff;font-weight:800;cursor:pointer}.toast{position:absolute;z-index:9;bottom:28px;left:50%;transform:translate(-50%,80px);padding:12px 17px;border-radius:12px;background:#29233c;color:#fff;font-size:12px;opacity:0;transition:.25s}.toast.show{transform:translate(-50%,0);opacity:1}
+    .room,.coach,.chat{min-height:0}.chat{overflow:hidden}.classroom-shell{display:grid;grid-template-columns:minmax(0,1fr) 0;gap:0;min-height:0;flex:1 1 0;overflow:hidden;transition:grid-template-columns .38s cubic-bezier(.2,.8,.2,1),gap .38s ease}.classroom-shell.material-open{grid-template-columns:minmax(0,1.1fr) minmax(315px,.9fr);gap:16px}.conversation-pane{display:flex;min-width:0;min-height:0;flex-direction:column;border:1px solid #e5e0ee;border-radius:18px;background:#fff;overflow:hidden}.pane-title{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #eeeaf4;color:#514a60;font-size:12px;font-weight:900}.pane-title span{color:#9992a6;font-size:10px;font-weight:500}.messages{min-height:0;flex:1;overflow-y:auto;padding:14px 15px 18px;scroll-behavior:smooth}.empty-chat{display:grid;height:100%;place-items:center;text-align:center;color:#9992a5;font-size:12px;line-height:1.7}.chat-message{max-width:86%;margin:0 0 13px;animation:messageIn .3s ease both}.chat-message.ai{margin-right:auto}.chat-message.user{margin-left:auto}.speaker{margin:0 0 5px 3px;color:#837a96;font-size:10px;font-weight:900;letter-spacing:.05em}.bubble{padding:12px 14px;border-radius:5px 16px 16px 16px;background:#f1eeff;color:#342d48;box-shadow:0 5px 14px #4638790a}.user .bubble{border-radius:16px 5px 16px 16px;background:#29233c;color:#fff}.bubble .en{font-size:13px;font-weight:750;line-height:1.55}.bubble .zh{margin-top:6px;padding-top:6px;border-top:1px solid #6b55dc1c;color:#756f80;font-size:11px;line-height:1.55}.user .bubble .zh{border-top-color:#ffffff20;color:#d8d3e2}.bubble .pending{color:#a29bad;font-style:italic}.material-panel{display:flex;min-width:0;min-height:0;flex-direction:column;overflow:hidden;border:1px solid #dfd8f1;border-radius:18px;background:#faf9ff;opacity:0;transform:translateX(34px);pointer-events:none;transition:opacity .28s ease,transform .38s cubic-bezier(.2,.8,.2,1)}.material-open .material-panel{opacity:1;transform:translateX(0);pointer-events:auto}.material-head{display:flex;flex:0 0 auto;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid #e7e1f1;background:#f3f0ff}.material-head b{color:#5d48c8;font-size:12px}.material-head span{color:#9188a6;font-size:10px}.material-content{min-height:0;flex:1;overflow-y:auto;padding:2px 12px 14px}.material-content .keyword-list{display:grid;gap:8px;margin:10px 0}.material-content .keyword-row,.material-content .read-aloud{margin:0;padding:10px 11px;border:1px solid #e1dbef;border-radius:12px;background:#fff;transition:.25s ease}.material-content .keyword-row{opacity:0;transform:translateY(8px);animation:materialItemIn .34s ease forwards}.material-content .keyword-row:nth-child(2){animation-delay:.1s}.material-content .keyword-row:nth-child(3){animation-delay:.2s}.material-content .keyword-row:nth-child(4){animation-delay:.3s}.material-content .keyword-row b{display:block;color:#5542bb;font-size:11px;line-height:1.5}.material-content .keyword-row p{margin:5px 0 0;color:#696273;font-size:10.5px;line-height:1.55}.material-content .keyword-row.active{border-color:#7964df;background:#f0edff;box-shadow:0 0 0 3px #765fe414}.material-content .keyword-row.active b{color:#4430b1}.material-content .read-aloud{color:#4d465b;font-size:12px;line-height:1.65}.material-content .read-aloud p{margin:0 0 9px}.material-content .read-aloud p:last-child{margin-bottom:0}.material-content .read-aloud strong{color:#4e3ec3;background:#efebff;border-radius:4px;padding:1px 3px}.material-placeholder{padding:22px 10px;text-align:center;color:#918a9e;font-size:11px;line-height:1.7}.live-caption{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;max-height:0;margin-top:0;padding:0 16px;overflow:hidden;border:0 solid #dcd5f1;border-radius:15px;background:#fff;opacity:0;transform:translateY(10px);transition:max-height .3s ease,margin .3s ease,padding .3s ease,opacity .24s ease,transform .3s ease,border-width .1s ease}.live-caption.show{max-height:108px;margin-top:10px;padding:10px 16px;border-width:1px;opacity:1;transform:translateY(0)}.caption-wave{display:flex;align-items:center;justify-content:center;gap:2px}.caption-wave i{width:3px;height:13px;border-radius:3px;background:#745fdd;animation:wave .8s ease-in-out infinite alternate}.caption-wave i:nth-child(2){height:20px;animation-delay:.15s}.caption-wave i:nth-child(3){height:9px;animation-delay:.3s}.caption-label{color:#6752ce;font-size:9px;font-weight:900;letter-spacing:.09em}.caption-en{margin-top:3px;color:#312a43;font-size:14px;font-weight:850;line-height:1.45}.caption-zh{margin-top:3px;color:#797281;font-size:11px;line-height:1.4}.material-event{display:flex;align-items:center;gap:8px;margin:2px 0 13px;color:#81798f;font-size:10px}.material-event:before,.material-event:after{content:"";height:1px;flex:1;background:#ece8f1}@keyframes messageIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}@keyframes materialItemIn{to{opacity:1;transform:none}}@keyframes wave{to{transform:scaleY(.45);opacity:.55}}
+    .pane-title{padding:9px 10px 9px 16px;font-weight:650}.material-toggle{border:0;border-radius:9px;padding:6px 9px;background:#f2effd;color:#6552c9;font:inherit;font-size:10px;font-weight:650;cursor:pointer}
+    .coach-card,.source,.live-caption{display:none!important}.portrait{margin-top:34px}.call-state{margin-top:22px;font-weight:650;letter-spacing:.04em}.task b{font-weight:650}.heading h1{font-weight:650}.save-note{font-weight:650}.bubble{position:relative;padding:13px 50px 13px 15px;background:#f5f3ff;box-shadow:none;transition:background .28s ease,opacity .28s ease}.bubble .en{font-size:14px;font-weight:450;line-height:1.62;transition:filter .3s ease,opacity .3s ease}.bubble .zh{margin-top:7px;padding-top:7px;color:#827b8c;font-size:11.5px;font-weight:400;line-height:1.55}.speaker{font-weight:650}.user .bubble{padding-right:15px;background:#3a334b}.material-content .keyword-row b{font-weight:600}.caption-en{font-weight:500}.transcript{font-size:11px}.chat-message{max-width:88%;margin-bottom:15px;animation:none}.chat-message.speaking .bubble{background:#f2f1f4}.chat-message.speaking .bubble .en{filter:blur(1.25px);opacity:.5}.voice-signal{position:absolute;top:50%;right:14px;width:24px;height:28px;overflow:visible;transform:translateY(-50%)}.voice-signal path{fill:none;stroke:#7edc3f;stroke-width:2.35;stroke-linecap:round;stroke-linejoin:round;opacity:1}.speaking .voice-signal path{animation:signalBreath 1.15s ease-in-out infinite}.speaking .voice-signal .arc-2{animation-delay:.14s}.speaking .voice-signal .arc-3{animation-delay:.28s}@keyframes signalBreath{0%,100%{opacity:.25}50%{opacity:1}}
+    .chat-message.ai+.chat-message.ai .speaker{display:none}.coach-card{display:block!important}.coach-card small{font-size:10px;font-weight:500;letter-spacing:.04em}.coach-card p{margin-top:7px;font-size:13px;font-weight:400;line-height:1.55}.chat-message.speaking .bubble .en{filter:blur(6px);opacity:.2;user-select:none}
+    .portrait img{position:absolute;inset:0}.portrait .portrait-talking{opacity:0;will-change:opacity}.portrait.is-talking .portrait-talking{animation:lindseyTalk 1.65s linear infinite}@keyframes lindseyTalk{0%,8%,100%{opacity:0}16%{opacity:.92}24%{opacity:.12}34%{opacity:.78}43%{opacity:.05}57%{opacity:.96}68%{opacity:.18}78%{opacity:.72}88%{opacity:0}}@media (prefers-reduced-motion:reduce){.portrait.is-talking .portrait-talking{animation:none;opacity:0}}
+    .chat-message.concealed .bubble .en{filter:blur(9px);opacity:.14;user-select:none}.chat-message.concealed .bubble:after{content:"听完后，试着复述这句话";position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#7566bd;font-size:10px;font-weight:500;letter-spacing:.03em}
+    .chat>.task{order:1}.chat>.progress{order:2}.chat>.heading{order:3}.chat>.classroom-shell{order:4}.chat>.live-caption{order:5}.chat>.callbar{order:6}.heading{margin:22px 2px 13px;padding-top:0;border-top:0}.heading h1{margin-top:4px;font-size:16px;font-weight:600;letter-spacing:-.1px}.heading p{margin-top:3px;font-size:10px}.eyebrow{font-size:8.5px;font-weight:650;letter-spacing:.14em}.save-note{padding:6px 9px;background:transparent;font-size:9px;font-weight:500}.save-note span{font-size:8.5px}
+    .task{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;margin-top:0;padding:18px 19px 17px;border-color:#d8cff5;border-left:5px solid #7059dc;box-shadow:0 10px 28px #43356e0d}.task>div:last-child{min-width:0;order:1}.task .badge{order:2;align-self:center;min-width:72px;height:28px;background:#f2efff;font-size:9.5px;font-weight:600}.task-label{display:block;margin-bottom:5px;color:#725ddd;font-size:9.5px;font-weight:700;letter-spacing:.14em}.task b{display:block;font-size:23px;font-weight:650;line-height:1.2;letter-spacing:-.35px}.task p{margin-top:6px;font-size:11px;line-height:1.5}
+    .progress{gap:12px;margin:12px 2px 8px}.progress>small{margin-right:2px;font-size:9px;font-weight:500}.phase-item{display:flex;min-width:0;flex:1;align-items:center;gap:7px}.phase-item span{color:#aaa4b3;font-size:10px;font-weight:400;white-space:nowrap}.phase-item.current span{color:#5e49c5;font-weight:700}.phase-item.done span{color:#7465b7;font-weight:500}.phase-item .bar{height:4px;flex:1}.bar.current{box-shadow:0 0 0 3px #725ddd12}
+    .pane-title{font-size:11px;font-weight:650}.pane-title span{font-size:9.5px}.call-state{font-size:9.5px;font-weight:600;letter-spacing:.08em}.source{font-size:10px}.source b{font-size:11px;font-weight:600}
+    .conversation-pane{position:relative}.readiness-gate{position:absolute;z-index:4;left:50%;top:57%;width:360px;padding:22px 24px;border:1px solid #ddd6f2;border-radius:18px;background:#fff;text-align:center;box-shadow:0 18px 45px #3326601c;opacity:0;transform:translate(-50%,-42%) scale(.98);pointer-events:none;transition:.24s ease}.readiness-gate.show{opacity:1;transform:translate(-50%,-50%) scale(1);pointer-events:auto}.readiness-gate b{display:block;font-size:19px;font-weight:600}.readiness-gate button{min-width:190px;margin-top:14px;padding:12px 24px;border:0;border-radius:12px;background:#6b55dc;color:#fff;font:inherit;font-size:16px;font-weight:600;cursor:pointer}.readiness-gate small{display:block;margin-top:10px;color:#8d8698;font-size:10px;font-weight:400}.readiness-gate.counting b{font-size:52px;color:#6550d2}.readiness-gate.counting button,.readiness-gate.counting small{display:none}
+    .reply-assist{position:relative;z-index:1;right:auto;bottom:auto;left:auto;flex:0 0 auto;max-height:0;margin:0 14px;padding:0 14px;overflow:hidden;border:0 solid #ded8f1;border-radius:14px;background:#fbfaff;box-shadow:none;opacity:0;transform:translateY(6px);pointer-events:none;transition:max-height .25s ease,margin .25s ease,padding .25s ease,border-width .1s ease,opacity .2s ease,transform .25s ease}.reply-assist.show{max-height:132px;margin:0 14px 14px;padding:11px 13px;border-width:1px;opacity:1;transform:none;pointer-events:auto}.reply-assist small{display:block;color:#817990;font-size:10px}.reply-assist .starter-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.reply-assist .starter{padding:7px 9px;border-radius:9px;background:#f3f0ff;color:#5747b8;font-size:11px}.reply-assist button{margin-top:9px;padding:0;border:0;background:transparent;color:#7968ce;font:inherit;font-size:10px;cursor:pointer}
+  </style>
+</head>
+<body>
+<main class="workspace"><section id="artboard" class="artboard">
+  <header class="top"><div class="brand"><div class="logo">L+</div><div><b>Lindsey 的 AI 提分教练</b><small>IELTS speaking practice</small></div></div><div class="course"><b>一节 AI 教练课</b><small>保持通话，AI 会陪你一步步练</small></div><button class="exit" id="exit">保存并退出</button></header>
+  <main class="room"><aside class="coach"><div class="portrait" id="coachPortrait"><img class="portrait-rest" src="assets/lindsey-coach-portrait-v1.png" alt="Lindsey AI 教练" /><img class="portrait-talking" src="assets/lindsey-coach-portrait-talking-v1.png" alt="" aria-hidden="true" /></div><div class="call-state"><i class="pulse"></i><span id="status">等待连接</span></div><div class="coach-card"><small>当前阶段 · 听懂</small><p id="coachText">Listen for the structure and main ideas.</p></div><div class="source"><b>这节课从哪里来？</b>把 ChatGPT 给出的高分答案，一步一步练成你在考场上能自己说出的表达。</div></aside>
+  <section class="chat"><div class="heading"><div><div class="eyebrow">LIVE COACHING CALL</div><h1>Why do people like to use social media?</h1><p id="goal">本节完成标准：独立完成这道题的观点与展开。</p></div><div class="save-note">进度会自动保存<span>中途退出，下次从这里继续</span></div></div><div class="task"><div class="badge" id="num">阶段 1 / 4</div><div><small class="task-label">现在要做</small><b id="stage">先听完整答案</b><p id="stageHint">先听结构和主要观点，不需要马上开口。</p></div></div><div class="progress" id="progress"><small>练习阶段</small><div class="phase-item current"><span>听懂</span><i class="bar current"></i></div><div class="phase-item"><span>跟熟</span><i class="bar"></i></div><div class="phase-item"><span>组织</span><i class="bar"></i></div><div class="phase-item"><span>说出</span><i class="bar"></i></div></div><div class="classroom-shell" id="classroomShell"><section class="conversation-pane"><div class="pane-title">课堂对话 <span>双方发言会自动保留</span></div><section class="messages" id="messages"><div class="empty-chat">连接实时语音后，Lindsey 会先介绍自己和今天的任务。<br>英文发言与中文翻译都会显示在这里。</div></section></section><aside class="material-panel" id="materialPanel" aria-hidden="true"><div class="material-head"><b id="materialTitle">课堂材料</b><span>随训练步骤动态出现</span></div><div class="material-content" id="materialContent"></div></aside></div><section class="live-caption" id="liveCaption" aria-live="polite"><div class="caption-wave"><i></i><i></i><i></i></div><div><div class="caption-label">LINDSEY 正在说</div><div class="caption-en" id="captionEn"></div><div class="caption-zh" id="captionZh"></div></div></section><div class="callbar"><div class="ongoing"><i></i><span id="callState">尚未连接</span></div><div class="transcript" id="transcript">点击“连接实时语音”，允许麦克风后即可对话。</div><button class="listen" id="play">● 连接实时语音</button><button class="listen" id="done">我听完了</button><button class="pause" id="pause">打断 AI</button><button class="finish" id="finish">结束通话</button></div></section></main><div class="toast" id="toast"></div>
+</section><div id="export-controls" class="export-controls"><button id="export-png">⇩ 导出 PNG</button></div></main>
+<script src="teaching-flow-social-media-v1.js"></script>
+<script src="realtime-voice-client.js"></script>
+<script>
+  const flow = window.LindseyTeachingFlow;
+  const { highScoreText, sentences, stages } = flow;
+  const phases = [
+    { title:'听懂', from:0, to:0 },
+    { title:'跟熟', from:1, to:3 },
+    { title:'组织', from:4, to:6 },
+    { title:'说出', from:7, to:8 }
+  ];
+  const coachPrompts = [
+    'Listen for the structure and main ideas.',
+    'Repeat each sentence after Lindsey.',
+    'Listen carefully, then retell from memory.',
+    'Read the complete answer smoothly.',
+    'Use the keywords to organise your answer.',
+    'Rebuild each idea in your own words.',
+    'Review one focused piece of feedback.',
+    'Read the complete answer once more.',
+    'Give the full answer with Chinese meaning only.'
+  ];
+  const actionTitles = [
+    '先听完整答案',
+    '逐句跟读一遍',
+    '精听复述',
+    '把整段连起来读',
+    '看关键词，整理答案',
+    '用自己的话逐句表达',
+    '查看本轮反馈',
+    '带着反馈再读一遍',
+    '只看中文，完整说一遍'
+  ];
+  const phaseIndexForStep = value => phases.findIndex(phase => value >= phase.from && value <= phase.to);
+  document.querySelector('.heading h1').textContent = flow.lesson.question;
+  document.querySelector('#goal').textContent = '本节完成标准：' + flow.lesson.completionStandard;
+  const resolveContent = stage => stage.contentKey ? flow[stage.contentKey] : null;
+  const highScoreBilingualHtml=`<div class="keyword-list">
+    <div class="keyword-row"><b>People in China use social media because it is emotionally satisfying and already part of their daily routine.</b><p>在中国，人们使用社交媒体，是因为它能带来情绪满足，而且早就成了日常生活的一部分。</p></div>
+    <div class="keyword-row"><b>Apps like WeChat and Xiaohongshu are not just for socializing. They are a mix of diary, search engine, marketplace, and news feed.</b><p>像微信、小红书这样的平台，不只是社交工具；它们像日记、搜索引擎、购物平台和新闻源的合体。</p></div>
+    <div class="keyword-row"><b>In a fast-paced society, social media offers quick emotional rewards, such as likes, comments, and views, that give people a tiny sense of achievement or connection.</b><p>在快节奏社会里，点赞、评论和浏览量会带来快速的情绪奖励，让人感到一点成就感或被连接的感觉。</p></div>
+    <div class="keyword-row"><b>But there is also a concern. If people rely on social media too much, they might feel more anxious or distracted and spend less time on real-life connections.</b><p>但如果过度依赖社交媒体，人们可能更焦虑、更容易分心，也会减少现实生活中的人际交流。</p></div>
+  </div>`;
+  const legacySentences=[
+    {en:'People in China use social media because it is emotionally satisfying and already part of their daily routine.',zh:'在中国，人们使用社交媒体，是因为它能带来情绪满足，而且早就成了日常生活的一部分。'},
+    {en:'Apps like WeChat and Xiaohongshu are not just for socializing.',zh:'像微信、小红书这样的平台，不只是社交工具。'},
+    {en:'They are a mix of diary, search engine, marketplace, and news feed.',zh:'它们像日记、搜索引擎、购物平台和新闻源的合体。'},
+    {en:'In a fast-paced society, social media offers quick emotional rewards, such as likes, comments, and views, that give people a tiny sense of achievement or connection.',zh:'在快节奏社会里，点赞、评论和浏览量会带来快速的情绪奖励，让人感到一点成就感或被连接的感觉。'},
+    {en:'But there is also a concern.',zh:'但这里也存在一个问题。'},
+    {en:'If people rely on social media too much, they might feel more anxious or distracted and spend less time on real-life connections.',zh:'如果过度依赖社交媒体，人们可能更焦虑、更容易分心，也会减少现实生活中的人际交流。'}
+  ];
+  const readAloudHtml=`<div class="read-aloud">
+    <p>People in China use social media because it is <strong>emotionally satisfying</strong> and already part of their <strong>daily routine</strong>.</p>
+    <p>Apps like <strong>WeChat and Xiaohongshu</strong> are not just for <strong>socializing</strong>. They are a mix of <strong>diary, search engine, marketplace, and news feed</strong>.</p>
+    <p>In a <strong>fast-paced society</strong>, social media offers <strong>quick emotional rewards</strong>, such as <strong>likes, comments, and views</strong>, that give people a <strong>tiny sense of achievement or connection</strong>.</p>
+    <p>But there is also a concern. If people <strong>rely on social media too much</strong>, they might feel more <strong>anxious or distracted</strong> and spend less time on <strong>real-life connections</strong>.</p>
+  </div>`;
+  const keywordTranslationHtml=`<div class="keyword-list">
+    <div class="keyword-row"><b>01 · emotionally satisfying · part of daily routine</b><p>在中国，人们使用社交媒体，是因为它能带来情绪满足，而且早就成了日常生活的一部分。</p></div>
+    <div class="keyword-row"><b>02 · WeChat / Xiaohongshu · diary · search engine · marketplace · news feed</b><p>像微信、小红书这样的平台，不只是社交工具；它们像日记、搜索引擎、购物平台和新闻源的合体。</p></div>
+    <div class="keyword-row"><b>03 · fast-paced society · quick emotional rewards · likes / comments / views · achievement or connection</b><p>在快节奏社会里，点赞、评论和浏览量会带来快速的情绪奖励，让人感到一点成就感或被连接的感觉。</p></div>
+    <div class="keyword-row"><b>04 · rely on it too much · anxious / distracted · less real-life connection</b><p>但如果过度依赖社交媒体，人们可能更焦虑、更容易分心，也会减少现实生活中的人际交流。</p></div>
+  </div>`;
+  const legacyStages=[
+    {name:'整段听一遍，理解这道题怎么回答',hint:'你现在只听，边听边看原文和完整翻译。',coach:'先听我示范一遍。边听边看原文和完整翻译，注意这道题是怎样回应问题、怎样展开内容的。',message:'先不用急着说。边听边看完整英文和中文意思，先抓住回答的结构和重点。',material:'高分语料 · 原文与完整翻译',content:highScoreBilingualHtml,button:'我听完了'},
+    {name:'逐句跟读 · 第 1 遍',hint:'AI 读一句，你跟一句；全段逐句完成。',coach:'我读一句，你跟一句。第一遍只要跟上，不停下来纠错。',material:'逐句跟读 · 第 1 遍',sentencePractice:true},
+    {name:'精听复述',hint:'英文保持隐藏；听完一句后，凭听力和记忆复述，再揭晓原句对照。',coach:'这一次先不看英文。认真听完整句，然后凭记忆复述；你说完后，我会揭晓原句。',material:'精听复述 · 中文与关键词',sentencePractice:true,listeningRetell:true},
+    {name:'整段连读一遍',hint:'展示整段英文；重点短语、提示词和话题词已加粗。',coach:'现在把整段连起来读一遍。重点短语已经标出来了，慢一点没关系，但不要再一句一句停。',material:'原始语料 · 整段连读',content:readAloudHtml},
+    {name:'关键词与翻译消化 · 1 分钟',hint:'只看英文关键词和每句完整中文翻译，不再看完整英文句。',coach:'接下来给你一分钟，只看英文关键词和每句中文意思，整理你准备怎么说。',message:'现在不需要开口。用这一分钟把逻辑和表达在脑子里重新组织一遍。',material:'英文关键词 + 整句中文翻译',content:keywordTranslationHtml,button:'我准备好了'},
+    {name:'看关键词与翻译复述',hint:'看着英文关键词和整句中文翻译复述；不显示完整英文原句。',coach:'现在只看英文关键词和每句中文意思，把整段复述出来。你可以用自己的话。',material:'英文关键词 + 整句中文翻译',content:keywordTranslationHtml},
+    {name:'统一反馈',hint:'固定查看本轮覆盖、表达与语法三个方面。',coach:'我会统一反馈这一轮的情况，但不会因为问题多就临时增加流程。',message:'这一轮反馈会固定查看：是否回应任务、是否保留核心逻辑、语法或表达是否影响理解。',material:'统一反馈',tip:'反馈被记录下来；下一步所有人都回看原文，再完整读一遍。',button:'我看完了'},
+    {name:'回看原文，再整段读一遍',hint:'带着刚才的反馈，固定完成一次整段连读。',coach:'现在回看原文，再完整读一遍。只做这一次，不额外加练。',material:'原始语料 · 回看后整段读',content:readAloudHtml},
+    {name:'无提示完整复述',hint:'不看原文、不看关键词，检查能否真正脱稿。',coach:'最后一遍完全不看提示。慢慢完整说出来，完成后今天就可以安心结束。',message:'现在没有任何提示。把这道题用你自己的话完整说出来。',material:'无提示模式',tip:'完成后，系统会明确告诉你今天已经练会了什么。',button:'我完成了'}
+  ];
+  const pageParams=new URLSearchParams(location.search);
+  const selfTestStage=pageParams.get('selftest');
+  const directTopicStart=pageParams.get('start')==='topic';
+  const followSelfTests=['follow','follow-complete','follow-nudge'];
+  let step=selfTestStage==='recall'?2:followSelfTests.includes(selfTestStage)?1:0;
+  let sentenceIndex=0;
+  let coachFollowup='';
+  let materialRevealed=false;
+  let scriptedMode=null;
+  let scriptedMessageIndex=null;
+  let scriptedText='';
+  let scriptedZh='';
+  let scriptedSentenceQueue=[];
+  let scriptedSentenceQueueIndex=0;
+  let scriptedSequenceMode=null;
+  let scriptedSentencePauseTimer=null;
+  let dynamicAiIndex=null;
+  let pendingBilingualCaptions=[];
+  let aiTurnCardIndexes=[];
+  let aiCompletedSentenceCount=0;
+  let activeAiCardIndex=null;
+  let lastUntranslatedAiCardIndexes=[];
+  let aiTurnPlaybackFinished=true;
+  let userMessageIndex=null;
+  let waitingForReady=false;
+  let readinessStarted=false;
+  let readinessMode='opening';
+  let topicChatPhase='inactive';
+  let topicChatPauseTimer=null;
+  let topicOpeningRequestId=0;
+  let topicTurnRequestId=0;
+  let topicStructuredTurn=null;
+  let topicSuppressionPending=false;
+  let waitingForLearnerReply=false;
+  let replyAssistTimer=null;
+  let replyNudgeTimer=null;
+  let skipFullAnswerAvailable=false;
+  let skipFullAnswerRequested=false;
+  let skipFullAnswerTimer=null;
+  let materialSequenceIndex=-1;
+  let materialPauseTimer=null;
+  let userTurnSegments=[];
+  let practiceLearnerTurnReady=false;
+  let practiceSpokenSegments=[];
+  let practicePendingAction=null;
+  let practiceActionTimer=null;
+  let readyVoicePending=false;
+  let readyLiveConfirmTimer=null;
+  let readyCaptionLocked=false;
+  let listeningRetellTargetIndexes=[];
+  const dialogueLog=[];
+  const $=s=>document.querySelector(s);
+  const escapeHtml=value=>String(value||'').replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
+  document.querySelector('.pane-title').innerHTML='课堂对话 <button class="material-toggle" id="materialToggle">查看本步材料</button>';
+  const stageElement=document.querySelector('#stage');
+  document.querySelector('.eyebrow').textContent="TODAY'S QUESTION";
+  if(!stageElement.parentElement.querySelector('.task-label')){const taskLabel=document.createElement('small');taskLabel.className='task-label';taskLabel.textContent='现在要做';stageElement.parentElement.insertBefore(taskLabel,stageElement)}
+  document.querySelector('#progress').innerHTML='<small>练习阶段</small>'+phases.map(phase=>'<div class="phase-item"><span>'+phase.title+'</span><i class="bar"></i></div>').join('');
+  const readyGate=document.createElement('div');readyGate.id='readyGate';readyGate.className='readiness-gate';readyGate.innerHTML='<b>Ready to begin?</b><button type="button" id="readyButton">I\u2019m ready</button><small>你也可以直接说：\u201cI\u2019m ready.\u201d</small>';document.querySelector('.conversation-pane').appendChild(readyGate);
+  const replyAssist=document.createElement('div');replyAssist.id='replyAssist';replyAssist.className='reply-assist';replyAssist.innerHTML='<small>不知道怎么说？可以直接从一句简单的话开始：</small><div class="starter-list"><span class="starter">I mostly use it for learning.</span><span class="starter">I usually open it when I want to relax.</span></div><button type="button" id="skipTopicQuestion">跳过这个问题，继续练习 →</button>';document.querySelector('.conversation-pane').appendChild(replyAssist);
+  if(new URLSearchParams(location.search).has('showAssist'))replyAssist.classList.add('show');
+  $('#status').textContent='等待连接';
+
+  function toast(text){$('#toast').textContent=text;$('#toast').classList.add('show');setTimeout(()=>$('#toast').classList.remove('show'),2200)}
+  function readyTone(step){try{const AudioContext=window.AudioContext||window.webkitAudioContext;if(!AudioContext)return;const context=new AudioContext();const oscillator=context.createOscillator();const gain=context.createGain();oscillator.frequency.value=step===1?720:560;gain.gain.setValueAtTime(.045,context.currentTime);gain.gain.exponentialRampToValueAtTime(.001,context.currentTime+.16);oscillator.connect(gain).connect(context.destination);oscillator.start();oscillator.stop(context.currentTime+.17);oscillator.onended=()=>context.close()}catch{}}
+  function showReadyGate(mode='opening'){clearTimeout(readyLiveConfirmTimer);readyLiveConfirmTimer=null;readyCaptionLocked=false;readinessMode=mode;waitingForReady=true;readinessStarted=false;readyGate.classList.remove('counting');readyGate.classList.add('show');const recall=mode==='recall';const follow=mode==='follow';readyGate.querySelector('b').textContent=recall?'Ready for listening recall?':follow?'Ready to repeat?':'Ready to begin?';readyGate.querySelector('button').style.display='';readyGate.querySelector('small').style.display='';readyGate.querySelector('small').textContent=recall?'这一遍英文会隐藏。听完后凭记忆复述；准备好可以说：“I\u2019m ready.”':follow?'准备好进入逐句跟读时，可以直接说：“I\u2019m ready.”':'你也可以直接说：“I\u2019m ready.”';$('#transcript').textContent=recall?'准备好做精听复述后，可以说“I\u2019m ready”或点击按钮。':follow?'不用着急。准备好逐句跟读后，可以说“I\u2019m ready”或点击按钮。':'准备好后，可以说“I\u2019m ready”，或点击按钮。';$('#status').textContent='等待你准备好';$('#callState').textContent=recall?'等待进入精听复述':follow?'等待进入跟读':'等待开始'}
+  function readinessPhrase(text){return /\b(i['\u2019]?m|i am)\s+ready\b/i.test(text)||/^\s*(yes|yeah|yep|ok|okay|ready)\b/i.test(text)}
+  function readyCaptionText(text){return /^\s*(yes|yeah|yep)\b/i.test(text)?"Yes, I'm ready":"I'm ready"}
+  function startReadyAcknowledgement(){readyVoicePending=false;if(readinessMode==='recall'){readyGate.querySelector('b').textContent='Listen carefully.';startScriptedSentenceSequence('recall-ready-ack','Great. Listen carefully, then retell the sentence from memory.','很好。认真听，然后凭记忆复述这句话。')}else if(readinessMode==='follow'){readyGate.querySelector('b').textContent='Take your time.';startScriptedSentenceSequence('follow-ready-ack','Great. Listen to the first sentence, then repeat it after me.','很好。先听第一句，然后跟着我重复。')}else{readyGate.querySelector('b').textContent='Great. Let\u2019s begin.';startScriptedSentenceSequence('ready-ack','Great. Let\u2019s begin.','很好，我们开始吧。')}}
+  function confirmReady(fromVoice=false,forceCommit=false){if(!waitingForReady||readinessStarted)return;clearTimeout(readyLiveConfirmTimer);readyLiveConfirmTimer=null;readinessStarted=true;waitingForReady=false;readyGate.querySelector('button').style.display='none';readyGate.querySelector('small').style.display='none';if(fromVoice){readyVoicePending=true;readyGate.querySelector('b').textContent='Got it.';$('#transcript').textContent='已听到你的准备确认，正在开始…';voice.suppressNextResponse(1200);if(forceCommit)voice.commitAudio();return}startReadyAcknowledgement()}
+  function materialPauseMs(index){if(index<0)return 1200;const wordCount=(sentences[index].en.match(/[A-Za-z]+(?:['\u2019][A-Za-z]+)?/g)||[]).length;if(index===sentences.length-1)return 2500;if(wordCount<=11)return 1200;if(wordCount>=23)return 2300;return 1800}
+  function speakMaterialSegment(){clearTimeout(materialPauseTimer);materialPauseTimer=null;const intro=materialSequenceIndex<0;const line=intro?{en:'Here is the full answer.',zh:'下面是完整的高分答案。'}:sentences[materialSequenceIndex];beginScriptedSpeech('material',line.en,line.zh);$('#transcript').textContent=intro?'完整答案即将开始…':'正在示范第 '+(materialSequenceIndex+1)+' / '+sentences.length+' 句';voice.sendText(line.en)}
+  function startMaterialSequence(){materialSequenceIndex=-1;speakMaterialSegment()}
+  function startAnswerCountdown(){readyGate.classList.add('counting');let count=3;const startAnswer=()=>{readyGate.classList.remove('show','counting');readyGate.querySelector('b').textContent='Ready to begin?';readyGate.querySelector('button').style.display='';readyGate.querySelector('small').style.display='';revealMaterial();addMaterialEvent('高分语料已展开 · Lindsey 开始示范朗读');skipFullAnswerAvailable=true;$('#pause').textContent='跳过本次朗读';startMaterialSequence()};const tick=()=>{readyGate.querySelector('b').textContent=count;readyTone(count);if(count===1){setTimeout(startAnswer,700);return}count--;setTimeout(tick,700)};tick()}
+  function startFollowCountdown(){clearTimeout(readyLiveConfirmTimer);readyLiveConfirmTimer=null;readyCaptionLocked=false;waitingForReady=false;readinessStarted=true;readinessMode='follow';readyGate.classList.add('show','counting');readyGate.querySelector('button').style.display='none';readyGate.querySelector('small').style.display='';readyGate.querySelector('small').textContent='倒计时后，Lindsey 先读第一句，你再跟读。';$('#status').textContent='准备进入逐句跟读';$('#callState').textContent='逐句跟读即将开始';$('#transcript').textContent='不需要确认，3、2、1 后直接开始第一句。';let count=3;const begin=()=>{readyGate.classList.remove('show','counting');readyGate.querySelector('b').textContent='Ready to begin?';readyGate.querySelector('button').style.display='';readyGate.querySelector('small').style.display='';$('#status').textContent='LINDSEY 正在示范第一句';speakCurrent()};const tick=()=>{readyGate.querySelector('b').textContent=count;readyTone(count);if(count===1){setTimeout(begin,700);return}count--;setTimeout(tick,700)};setTimeout(tick,350)}
+  function topicChatActive(){return topicChatPhase!=='inactive'}
+  function topicWaitingForLearner(){return topicChatPhase==='waiting-first'||topicChatPhase==='waiting-second'}
+  function topicFinalAnswer(){return topicChatPhase==='waiting-second'||topicChatPhase==='responding-second'||topicChatPhase==='bridging'}
+  function prepareTopicChat(){clearTimeout(materialPauseTimer);materialPauseTimer=null;clearTimeout(topicChatPauseTimer);topicChatPauseTimer=null;skipFullAnswerAvailable=false;$('#pause').textContent='打断 AI';setActiveMaterialSentence(-1);voice.autonomousPlaybackDelayMs=250;$('#done').textContent='我说完了'}
+  function finishSkipFullAnswer(){
+    if(!skipFullAnswerRequested)return;
+    skipFullAnswerRequested=false;clearTimeout(skipFullAnswerTimer);skipFullAnswerTimer=null;clearTimeout(materialPauseTimer);materialPauseTimer=null;clearTimeout(scriptedSentencePauseTimer);scriptedSentencePauseTimer=null;scriptedSentenceQueue=[];scriptedSentenceQueueIndex=0;scriptedSequenceMode=null;scriptedMode=null;scriptedMessageIndex=null;hideCaption();$('#transcript').textContent='已跳过完整朗读，正在进入自由对话…';setTimeout(()=>{beginTopicChat();toast('已跳过本次完整朗读')},180)
+  }
+  async function requestTopicOpeningQuestion(){
+    const response=await fetch('/api/topic-opening-question',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({question:flow.lesson.question,highScoreAnswer:highScoreText})});
+    const payload=await response.json().catch(()=>({}));
+    if(!response.ok||!payload.english||!payload.chinese)throw new Error(payload.message||'第一问生成失败。');
+    return payload;
+  }
+  async function requestTopicChatTurn(round,learnerAnswer){
+    const recentConversation=dialogueLog.filter(item=>!item.canceled&&item.type!=='event').slice(-8).map(item=>({role:item.role,english:item.en}));
+    const response=await fetch('/api/topic-chat-turn',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({round,question:flow.lesson.question,highScoreAnswer:highScoreText,learnerAnswer,recentConversation})});
+    const payload=await response.json().catch(()=>({}));
+    const validRoundOne=round===1&&payload.acknowledgement&&payload.acknowledgementChinese&&payload.followUpQuestion&&payload.followUpQuestionChinese;
+    const validRoundTwo=round===2&&payload.acknowledgement&&payload.acknowledgementChinese&&!payload.followUpQuestion;
+    if(!response.ok||!(validRoundOne||validRoundTwo))throw new Error(payload.message||'自由对话回应生成失败。');
+    return payload;
+  }
+  function maybeStartStructuredTopicReply(){
+    if(topicSuppressionPending||!topicStructuredTurn||scriptedMode)return;
+    const turn=topicStructuredTurn;topicStructuredTurn=null;
+    if(turn.round===1&&topicChatPhase==='responding-first'){
+      startScriptedSentenceSequence('topic-first-structured',turn.acknowledgement+' '+turn.followUpQuestion,turn.acknowledgementChinese+' '+turn.followUpQuestionChinese);return
+    }
+    if(turn.round===2&&topicChatPhase==='responding-second'){
+      startScriptedSentenceSequence('topic-second-structured',turn.acknowledgement,turn.acknowledgementChinese)
+    }
+  }
+  async function generateStructuredTopicReply(round,learnerAnswer){
+    const requestId=++topicTurnRequestId;topicStructuredTurn=null;topicSuppressionPending=true;
+    voice.suppressNextResponse(1600);$('#status').textContent='LINDSEY 正在思考';$('#transcript').textContent='Lindsey 正在根据你的完整回答组织一句自然回应…';
+    try{const turn=await requestTopicChatTurn(round,learnerAnswer);if(requestId!==topicTurnRequestId)return;topicStructuredTurn={round,...turn};maybeStartStructuredTopicReply()}
+    catch(error){if(requestId!==topicTurnRequestId)return;topicStructuredTurn=null;topicSuppressionPending=false;topicChatPhase=round===1?'waiting-first':'waiting-second';$('#status').textContent='回应生成失败';$('#transcript').textContent=error.message;toast(error.message);startLearnerReplyWindow()}
+  }
+  async function beginTopicChat(){
+    prepareTopicChat();topicChatPhase='preparing-first';const requestId=++topicOpeningRequestId;$('#status').textContent='LINDSEY 正在想第一个问题';$('#transcript').textContent='正在根据今天的题目生成自然的开场问题…';
+    const topicLesson=lessonContext();topicLesson.endSmoothWindowMs=3200;topicLesson.turnTaking='Use native full-duplex turn-taking. Never infer turn completion from words or meaning. If the learner resumes speaking, yield immediately and keep listening.';voice.updateLesson(topicLesson);
+    try{const opening=await requestTopicOpeningQuestion();if(requestId!==topicOpeningRequestId||topicChatPhase!=='preparing-first')return;topicChatPhase='asking-first';$('#transcript').textContent='Lindsey 正在开始自由对话…';startScriptedSentenceSequence('question',opening.english,opening.chinese)}
+    catch(error){if(requestId!==topicOpeningRequestId)return;topicChatPhase='inactive';$('#status').textContent='第一问生成失败';$('#transcript').textContent=error.message;toast(error.message)}
+  }
+  function clearLearnerReplyWindow(){waitingForLearnerReply=false;clearTimeout(replyAssistTimer);clearTimeout(replyNudgeTimer);replyAssistTimer=null;replyNudgeTimer=null;replyAssist.classList.remove('show')}
+  function startLearnerReplyWindow(){clearLearnerReplyWindow();waitingForLearnerReply=true;$('#status').textContent='正在听';$('#transcript').textContent='轮到你了；可以慢慢想，Lindsey 会等你说完。';replyAssistTimer=setTimeout(()=>{if(waitingForLearnerReply)replyAssist.classList.add('show')},7000);replyNudgeTimer=setTimeout(()=>{if(!waitingForLearnerReply||voice.aiSpeaking)return;startScriptedSentenceSequence('silence-nudge','Take your time. You can start with one simple sentence.','慢慢来，可以先从一句简单的话开始。')},13000)}
+  function enterFollowReadiness(){clearLearnerReplyWindow();clearTimeout(topicChatPauseTimer);topicChatPauseTimer=null;clearTimeout(practiceActionTimer);practiceActionTimer=null;topicChatPhase='inactive';voice.autonomousPlaybackDelayMs=250;step=1;sentenceIndex=0;practiceSpokenSegments=[];practicePendingAction=null;materialRevealed=true;render();voice.updateLesson(lessonContext());startFollowCountdown()}
+  function skipTopicQuestion(){if(!topicChatActive())return;clearLearnerReplyWindow();topicChatPhase='bridging';voice.updateLesson(lessonContext());startScriptedSentenceSequence('silence-bridge','No worries. Let\u2019s take the answer one sentence at a time.','没关系，我们接下来一句一句练。')}
+  readyGate.querySelector('#readyButton').onclick=()=>{addMessage('user','I\u2019m ready.','我准备好了。');confirmReady()};
+  replyAssist.querySelector('#skipTopicQuestion').onclick=skipTopicQuestion;
+  function lessonContext(){
+    const stage=stages[step];
+    const recallMode=Boolean(stage.listeningRetell);
+    const echoMode=Boolean(stage.sentencePractice&&!recallMode);
+    const finalTopicAnswer=topicFinalAnswer();
+    const liveDirective=finalTopicAnswer
+      ?'Do not generate an autonomous reply. The client is generating and validating the final acknowledgement as structured JSON and will send exact prevalidated speech text. When it arrives, speak only that exact text and append nothing.'
+      :topicChatActive()
+        ?'Do not generate an autonomous reply. The client is generating and validating one acknowledgement plus one dynamic follow-up question as structured JSON and will send exact prevalidated speech text. When it arrives, speak only that exact text and append nothing.'
+        :recallMode
+          ?'This is listening recall. Never speak while the learner is still talking. Once the learner has clearly finished, respond as a warm human tutor would: use a brief natural acknowledgement when it helps, or simply leave a comfortable beat. Do not follow a fixed phrase pattern. Do not correct, explain, or read the next sentence; the client will reveal the original for comparison and then advance.'
+          :echoMode
+            ?'This is echo repetition. Never speak while the learner is still talking. Once the learner has clearly finished, respond as a warm human tutor would: use a brief natural acknowledgement when it helps, or simply leave a comfortable beat. Do not follow a fixed phrase pattern, evaluate, correct, explain, ask a question, or read the next sentence. The client will play the next sentence.'
+            :'';
+    const endSmoothWindowMs=topicChatActive()?3200:recallMode?1500:echoMode?1100:stage.sentenceRetell?1500:2200;
+    return{part:flow.lesson.part,question:flow.lesson.question,completionStandard:flow.lesson.completionStandard,completionStandardEn:flow.lesson.completionStandardEn,entryType:'first-entry',interactionMode:finalTopicAnswer?'topic-chat-closing':topicChatActive()?'topic-chat':recallMode?'listening-retell':echoMode?'echo-repeat':'guided-practice',liveDirective,endSmoothWindowMs,speakingStyle:topicChatActive()?'Warm, friendly, lightly smiling, conversational, and unhurried. Preserve the model\'s natural timing and wording; never sound templated.':'Patient, clear, supportive, and natural. Preserve the model\'s own conversational timing and prosody.',openingChat:{maxAnswers:2,silenceFallbackSeconds:3,openingPolicy:'The opening question is generated at runtime from the current lesson question and reference answer. It is never stored as fixed lesson copy.',followUpPolicy:'Generate the follow-up at runtime from the current lesson question and the learner\'s complete first answer. Never use a fixed sentence or question template.'},highScoreAnswer:highScoreText,sentences:sentences.map(({en,zh,keywords})=>({en,zh,keywords})),languageTakeaway:flow.languageTakeaway,currentStep:step+1,currentStage:stage.name,currentSentence:sentenceIndex+1,followMode:flow.followMode,savedProgress:null,recentConversation:dialogueLog.filter(item=>!item.canceled).slice(-12),feedbackRecord:[]}}
+  function renderConversation(){
+    const container=$('#messages');
+    if(!dialogueLog.some(item=>!item.canceled)){container.innerHTML='<div class="empty-chat">连接实时语音后，Lindsey 会先介绍自己和今天的任务。<br>英文发言与中文翻译都会显示在这里。</div>';return;}
+    container.innerHTML=dialogueLog.map((item,index)=>item.canceled?'':item.type==='event'
+      ?'<div class="material-event">'+escapeHtml(item.text)+'</div>'
+      :'<article class="chat-message '+item.role+(item.speaking?' speaking':'')+(item.concealed?' concealed':'')+'" data-log-index="'+index+'"><div class="speaker">'+(item.role==='ai'?'LINDSEY · AI 外教':'YOU')+'</div><div class="bubble"><div class="en">'+escapeHtml(item.en)+'</div>'+(item.role==='ai'?'<div class="zh'+(item.pending?' pending':'')+'">'+escapeHtml(item.zh||'翻译生成中…')+'</div>':'')+(item.role==='ai'?'<svg class="voice-signal" viewBox="0 0 24 28" aria-hidden="true"><path class="arc-1" d="M5.5 11.2 C7.8 12.7 7.8 15.3 5.5 16.8"/><path class="arc-2" d="M9.2 7.6 C14.1 10.6 14.1 17.4 9.2 20.4"/><path class="arc-3" d="M13.1 4 C20.2 8.5 20.2 19.5 13.1 24"/></svg>':'')+'</div></article>').join('');
+    requestAnimationFrame(()=>{container.scrollTop=container.scrollHeight});
+  }
+  function addMessage(role,en,zh='',pending=false,speaking=false){dialogueLog.push({role,en,zh,pending,speaking});renderConversation();return dialogueLog.length-1}
+  function updateMessage(index,patch){
+    if(index==null||!dialogueLog[index])return;Object.assign(dialogueLog[index],patch);
+    const item=dialogueLog[index];const card=$('#messages').querySelector('[data-log-index="'+index+'"]');
+    if(!card){renderConversation();return}
+    card.classList.toggle('speaking',Boolean(item.speaking));card.classList.toggle('concealed',Boolean(item.concealed));card.querySelector('.en').textContent=item.en;
+    const bubble=card.querySelector('.bubble');let translation=card.querySelector('.zh');
+    if(item.zh&&!translation){translation=document.createElement('div');translation.className='zh';bubble.insertBefore(translation,bubble.querySelector('.voice-signal'))}
+    if(translation){translation.textContent=item.zh||'翻译生成中…';translation.classList.toggle('pending',Boolean(item.pending))}
+    requestAnimationFrame(()=>{$('#messages').scrollTop=$('#messages').scrollHeight});
+  }
+  function addMaterialEvent(text){dialogueLog.push({type:'event',text});renderConversation()}
+  function parseEnglishSentences(text){
+    const complete=[];const pattern=/[^.!?]+[.!?]+[\u2019'\"]?/g;let match;let lastIndex=0;
+    while((match=pattern.exec(text))){complete.push(match[0].trim());lastIndex=pattern.lastIndex}
+    return{complete,remainder:text.slice(lastIndex).trim()};
+  }
+  function parseChineseSentences(text){return(text.match(/[^。！？]+[。！？]?/g)||[]).map(part=>part.trim()).filter(Boolean)}
+  function normalizeUserSegment(text){return String(text||'').trim().replace(/\s+([,.;!?])/g,'$1').replace(/\bi\b/g,'I').replace(/\bxiaohongshu\b/gi,'Xiaohongshu').replace(/\bwechat\b/gi,'WeChat')}
+  function userSegmentKey(text){return normalizeUserSegment(text).toLowerCase().replace(/[’']/g,"'").replace(/[^a-z0-9']+/g,' ').trim()}
+  function punctuateUserSegment(text,isFinal=false){let value=normalizeUserSegment(text);if(!value)return'';value=value.replace(/^(um|uh)\b\s*/i,match=>match.trim()+', ');if(/[.!?]$/.test(value))return value;if(isFinal)return value+'.';if(/\b(and|but|because|so|then)\s*$/i.test(value))return value;return value+','}
+  function composeUserAnswer(liveText=''){const parts=[...userTurnSegments];const live=normalizeUserSegment(liveText);if(live&&userSegmentKey(parts.at(-1))!==userSegmentKey(live))parts.push(live);const hasLive=Boolean(live&&userSegmentKey(parts.at(-1))===userSegmentKey(live)&&userSegmentKey(userTurnSegments.at(-1))!==userSegmentKey(live));return parts.map((part,index)=>hasLive&&index===parts.length-1?normalizeUserSegment(part):punctuateUserSegment(part,index===parts.length-1&&!hasLive)).join(' ').replace(/,\s*([.!?])/g,'$1')}
+  function rollingUserCaption(text,maxWords=12){const words=normalizeUserSegment(text).split(/\s+/).filter(Boolean);return words.slice(-maxWords).join(' ')}
+  function updateUserTurnCard(liveText=''){const paragraph=composeUserAnswer(liveText);if(!paragraph)return;if(userMessageIndex==null)userMessageIndex=addMessage('user',paragraph);else updateMessage(userMessageIndex,{en:paragraph})}
+  function finalizeUserTranscript(text){const segment=normalizeUserSegment(text);const key=userSegmentKey(segment);if(segment&&key&&!userTurnSegments.some(part=>userSegmentKey(part)===key))userTurnSegments.push(segment);updateUserTurnCard()}
+  function closeUserTurnCard(){if(userMessageIndex!=null&&userTurnSegments.length){const paragraph=userTurnSegments.map((part,index)=>punctuateUserSegment(part,index===userTurnSegments.length-1)).join(' ').replace(/,\s*([.!?])/g,'$1');updateMessage(userMessageIndex,{en:paragraph})}userMessageIndex=null;userTurnSegments=[]}
+  function practiceWords(text){return String(text||'').toLowerCase().replace(/[’']/g,'').match(/[a-z]+/g)||[]}
+  function orderedWordMatches(spoken,target){const rows=Array(target.length+1).fill(0);for(const word of spoken){let previous=0;for(let index=1;index<=target.length;index++){const saved=rows[index];rows[index]=word===target[index-1]?previous+1:Math.max(rows[index],rows[index-1]);previous=saved}}return rows[target.length]}
+  function practiceSentenceComplete(text){const segment=normalizeUserSegment(text);if(segment&&practiceSpokenSegments.at(-1)!==segment)practiceSpokenSegments.push(segment);const target=practiceWords(sentences[sentenceIndex]?.en);const spoken=practiceWords(practiceSpokenSegments.join(' '));if(!target.length)return true;const matched=orderedWordMatches(spoken,target);const threshold=target.length<=7?.65:.72;const ending=target.slice(-Math.min(3,target.length));const endingMatches=ending.filter(word=>spoken.includes(word)).length;return matched/target.length>=threshold&&endingMatches>=Math.min(2,ending.length)}
+  function beginAiCardTurn(){aiTurnCardIndexes=[];aiCompletedSentenceCount=0;activeAiCardIndex=null;aiTurnPlaybackFinished=false}
+  function renderAiSentenceCards(visibleText,translation=''){
+    const parsed=parseEnglishSentences(visibleText);const translations=parseChineseSentences(translation);
+    for(let i=aiCompletedSentenceCount;i<parsed.complete.length;i++){
+      const sentence=parsed.complete[i];const zh=translations[i]||'';
+      if(activeAiCardIndex==null){activeAiCardIndex=addMessage('ai',sentence,zh||'翻译生成中…',!zh,false);aiTurnCardIndexes.push(activeAiCardIndex)}
+      else updateMessage(activeAiCardIndex,{en:sentence,zh:zh||dialogueLog[activeAiCardIndex].zh||'翻译生成中…',pending:!zh,speaking:false});
+      activeAiCardIndex=null;aiCompletedSentenceCount++;
+    }
+    if(parsed.remainder){
+      if(activeAiCardIndex==null){activeAiCardIndex=addMessage('ai',parsed.remainder,'翻译生成中…',true,true);aiTurnCardIndexes.push(activeAiCardIndex)}
+      else updateMessage(activeAiCardIndex,{en:parsed.remainder,speaking:true});
+    }
+  }
+  function finalizeAiCardTurn(fullText,translation=''){
+    const english=parseEnglishSentences(fullText);const allEnglish=[...english.complete,...(english.remainder?[english.remainder]:[])];const translations=parseChineseSentences(translation);
+    aiTurnCardIndexes.forEach((index,position)=>updateMessage(index,{en:allEnglish[position]||dialogueLog[index].en,zh:translations[position]||dialogueLog[index].zh||'翻译生成中…',pending:!translations[position],speaking:false}));
+    activeAiCardIndex=null;
+  }
+  function discardInterruptedAiTurn(){
+    aiTurnCardIndexes.forEach(index=>{if(dialogueLog[index]?.role==='ai')dialogueLog[index].canceled=true});
+    aiTurnCardIndexes=[];activeAiCardIndex=null;aiCompletedSentenceCount=0;lastUntranslatedAiCardIndexes=[];renderConversation();
+  }
+  function applyCaptionToCards(caption,indexes){
+    const english=parseEnglishSentences(caption.english);const allEnglish=[...english.complete,...(english.remainder?[english.remainder]:[])];const translations=parseChineseSentences(caption.chinese);
+    indexes.forEach((index,position)=>{const zh=translations[position]||'';updateMessage(index,{en:allEnglish[position]||dialogueLog[index].en,zh:zh||dialogueLog[index].zh||'翻译生成中…',pending:!zh,speaking:false})});
+  }
+  function normalizeCaptionMatch(text){return String(text||'').toLowerCase().replace(/[’']/g,"'").replace(/[^a-z0-9']+/g,' ').trim()}
+  function captionTargetIndexes(english){
+    const parsed=parseEnglishSentences(english);const parts=[...parsed.complete,...(parsed.remainder?[parsed.remainder]:[])].map(normalizeCaptionMatch).filter(Boolean);
+    const candidates=dialogueLog.map((item,index)=>({item,index,key:normalizeCaptionMatch(item?.en)})).filter(({item,key})=>item?.role==='ai'&&key);
+    const used=new Set();const indexes=[];
+    for(const part of parts){const match=candidates.find(({index,key})=>!used.has(index)&&(key===part||key.includes(part)||part.includes(key)));if(match){used.add(match.index);indexes.push(match.index)}}
+    return indexes;
+  }
+  function tryApplyBilingualCaption(caption){const indexes=captionTargetIndexes(caption?.english);if(!indexes.length||indexes.some(index=>dialogueLog[index]?.speaking))return false;applyCaptionToCards(caption,indexes);return true}
+  function flushPendingBilingualCaptions(){pendingBilingualCaptions=pendingBilingualCaptions.filter(caption=>!tryApplyBilingualCaption(caption))}
+  function revealListeningTarget(){if(!listeningRetellTargetIndexes.length)return;listeningRetellTargetIndexes.forEach(index=>updateMessage(index,{concealed:false}));$('#transcript').textContent='原句已揭晓。对照一下刚才听到和说出的内容。'}
+  function updateCoachPanel(){
+    const phaseIndex=phaseIndexForStep(step);const phase=phases[phaseIndex];
+    document.querySelector('.coach-card small').textContent='当前阶段 · '+phase.title;
+    $('#coachText').textContent=coachPrompts[step];
+  }
+  function showCaption(en,zh=''){if(!en)return;$('#captionEn').textContent=en;$('#captionZh').textContent=zh||'中文翻译生成中…';$('#liveCaption').classList.add('show')}
+  function hideCaption(){$('#liveCaption').classList.remove('show')}
+
+  function bilingualCards(){return '<div class="keyword-list">'+sentences.map((line,index)=>'<div class="keyword-row" data-sentence="'+index+'"><b>'+escapeHtml(line.en)+'</b><p>'+escapeHtml(line.zh)+'</p></div>').join('')+'</div>'}
+  function materialHtmlForStage(stage){
+    if(step===0)return bilingualCards();
+    if(stage.listeningRetell){const line=sentences[sentenceIndex];return '<div class="keyword-list"><div class="keyword-row active"><b>'+escapeHtml(line.keywords)+'</b><p>'+escapeHtml(line.zh)+'</p></div></div>'}
+    if(stage.sentencePractice){const line=sentences[sentenceIndex];return '<div class="keyword-list"><div class="keyword-row active"><b>'+escapeHtml(line.en)+'</b><p>'+escapeHtml(line.zh)+'</p></div></div>'}
+    if(stage.sentenceRetell){const line=sentences[sentenceIndex];return '<div class="keyword-list"><div class="keyword-row active"><b>'+escapeHtml(line.keywords)+'</b><p>'+escapeHtml(line.zh)+'</p></div></div>'}
+    const content=resolveContent(stage);
+    if(content)return content;
+    return '<div class="material-placeholder">'+escapeHtml(stage.tip||'本步骤的反馈会在对话窗口中呈现。')+'</div>';
+  }
+  function renderMaterial(){
+    const stage=stages[step];
+    $('#materialTitle').textContent=stage.material||'课堂材料';
+    $('#materialContent').innerHTML=materialHtmlForStage(stage);
+    $('#classroomShell').classList.toggle('material-open',materialRevealed);
+    $('#materialPanel').setAttribute('aria-hidden',String(!materialRevealed));
+    $('#materialToggle').textContent=materialRevealed?'收起本步材料':'查看本步材料';
+  }
+  function revealMaterial(){materialRevealed=true;renderMaterial()}
+  function resetAndRevealMaterial(){materialRevealed=false;renderMaterial();setTimeout(revealMaterial,180)}
+  function setActiveMaterialSentence(index){document.querySelectorAll('#materialContent [data-sentence]').forEach(row=>row.classList.toggle('active',Number(row.dataset.sentence)===index))}
+  function beginScriptedSpeech(mode,text,zh=''){scriptedMode=mode;scriptedText=text;scriptedZh=zh;scriptedMessageIndex=null}
+  function prepareScriptedSentenceSequence(mode,text,zh=''){
+    const english=parseEnglishSentences(text);const englishUnits=[...english.complete,...(english.remainder?[english.remainder]:[])];const translations=parseChineseSentences(zh);
+    const units=englishUnits.length?englishUnits:[text];
+    scriptedSentenceQueue=zh&&translations.length!==units.length?[{en:String(text||'').trim(),zh:String(zh||'').trim()}]:units.map((en,index)=>({en,zh:translations[index]||''}));scriptedSentenceQueueIndex=0;scriptedSequenceMode=mode;
+    const first=scriptedSentenceQueue[0];beginScriptedSpeech(mode,first.en,first.zh);return first;
+  }
+  function startScriptedSentenceSequence(mode,text,zh=''){const first=prepareScriptedSentenceSequence(mode,text,zh);voice.sendText(first.en)}
+  function startListeningRetellUnit(text,zh=''){
+    scriptedSentenceQueue=[];scriptedSentenceQueueIndex=0;scriptedSequenceMode=null;listeningRetellTargetIndexes=[];
+    beginScriptedSpeech('stage',text,zh);voice.sendText(text);
+  }
+  function continueScriptedSentenceSequence(){
+    if(!scriptedSentenceQueue.length||scriptedMode!==scriptedSequenceMode)return false;
+    if(scriptedSentenceQueueIndex<scriptedSentenceQueue.length-1){scriptedSentenceQueueIndex++;const next=scriptedSentenceQueue[scriptedSentenceQueueIndex];const mode=scriptedSequenceMode;scriptedMode='sentence-breath';clearTimeout(scriptedSentencePauseTimer);scriptedSentencePauseTimer=setTimeout(()=>{scriptedSentencePauseTimer=null;beginScriptedSpeech(mode,next.en,next.zh);voice.sendText(next.en)},900);return true}
+    scriptedSentenceQueue=[];scriptedSentenceQueueIndex=0;scriptedSequenceMode=null;return false;
+  }
+  function updateMaterialReading(text){
+    const intro=materialSequenceIndex<0;const line=intro?{zh:'下面是完整的高分答案。'}:sentences[materialSequenceIndex];
+    renderAiSentenceCards(text,line.zh);
+    if(!intro){setActiveMaterialSentence(materialSequenceIndex);showCaption(sentences[materialSequenceIndex].en,sentences[materialSequenceIndex].zh)}
+  }
+  function scriptedTranslation(stage,text){
+    if(stage.sentencePractice)return sentences[sentenceIndex].zh;
+    if(stage.sentenceRetell&&coachFollowup){const match=sentences.find(line=>line.praiseEn===coachFollowup);return match?.praise||stage.coach}
+    return stage.coach||'';
+  }
+
+  const stateLabels={connecting:'连接中',connected:'鉴权成功',listening:'正在听','user-speaking':'你正在说',thinking:'正在思考','ai-speaking':'LINDSEY 正在说','ai-retrying':'语音正在恢复','ai-resuming':'LINDSEY 重新播放本句',closed:'通话已结束'};
+  const voice=new window.LindseyRealtimeVoice({
+    onState:state=>{
+      if(selfTestStage&&state==='connected'&&voice.processor){voice.processor.onaudioprocess=()=>{};voice.pendingInput=new Uint8Array(0)}
+      const label=stateLabels[state]||state;
+      $('#coachPortrait').classList.toggle('is-talking',state==='ai-speaking'||state==='ai-resuming');
+      $('#status').textContent=label;$('#callState').textContent=label;
+      $('#play').textContent=state==='closed'?'● 重新连接':'● 实时语音已连接';
+      $('#play').disabled=!['closed'].includes(state)&&state!=='listening';
+      if(state==='user-speaking'){clearTimeout(topicChatPauseTimer);topicChatPauseTimer=null;if(topicChatPhase==='responding-first'||topicChatPhase==='responding-second'){topicTurnRequestId++;topicStructuredTurn=null;topicSuppressionPending=false;if(scriptedMode==='topic-first-structured'||scriptedMode==='topic-second-structured'){voice.interrupt();discardInterruptedAiTurn()}}if(scriptedSentencePauseTimer){clearTimeout(scriptedSentencePauseTimer);scriptedSentencePauseTimer=null;scriptedSentenceQueue=[];scriptedSequenceMode=null;scriptedMode=null}clearLearnerReplyWindow()}
+      if(state==='user-speaking'&&(practicePendingAction||practiceActionTimer)){practicePendingAction=null;clearTimeout(practiceActionTimer);practiceActionTimer=null;$('#transcript').textContent='继续读，Lindsey 正在听。'}
+      if(state==='ai-speaking'){
+        if(topicWaitingForLearner()&&!scriptedMode){voice.interrupt();$('#coachPortrait').classList.remove('is-talking');$('#status').textContent='正在听';$('#transcript').textContent='轮到你了，Lindsey 正在等你回答。';return}
+        closeUserTurnCard();
+        readyCaptionLocked=false;
+        beginAiCardTurn();
+        if(!scriptedMode){dynamicAiIndex=null}
+      }
+    },
+    onUserHypothesis:text=>{
+      if(!text)return;
+      clearLearnerReplyWindow();
+      if(waitingForReady&&readinessPhrase(text)){
+        readyCaptionLocked=true;updateUserTurnCard(readyCaptionText(text));
+        $('#transcript').textContent='听到你说准备好了，正在确认…';
+        if(!readyLiveConfirmTimer)readyLiveConfirmTimer=setTimeout(()=>{readyLiveConfirmTimer=null;if(waitingForReady)confirmReady(true,true)},420)
+      }
+    },
+    onUserText:text=>{
+      if(!text)return;
+      clearLearnerReplyWindow();
+      $('#transcript').textContent='正在识别你的回答…';
+      const readyDetected=(waitingForReady||readyCaptionLocked)&&readinessPhrase(text);if(readyDetected)readyCaptionLocked=true;
+      updateUserTurnCard(readyDetected?readyCaptionText(text):text);
+      if(waitingForReady&&readinessPhrase(text)){ $('#transcript').textContent='听到你说准备好了，正在确认…';if(!readyLiveConfirmTimer)readyLiveConfirmTimer=setTimeout(()=>{readyLiveConfirmTimer=null;if(waitingForReady)confirmReady(true,true)},420)}
+    },
+    onUserFinalText:text=>{const finalText=readyCaptionLocked?readyCaptionText(text):text;finalizeUserTranscript(finalText);if(waitingForReady&&readinessPhrase(text))confirmReady(true)},
+    onUserTurnDone:text=>{
+      if(readyVoicePending)return;
+      if(stages[step].sentencePractice&&text){const complete=practiceSentenceComplete(text);if(stages[step].listeningRetell&&complete)revealListeningTarget();practicePendingAction=complete?'advance':'nudge';voice.suppressNextResponse();$('#transcript').textContent=complete?'这一句已完成，准备听下一句。':'还没读完整；Lindsey 会轻声提醒，然后继续听。';return}
+      if(!topicChatActive()||!text)return;
+      clearTimeout(topicChatPauseTimer);topicChatPauseTimer=null;
+      if(topicChatPhase==='waiting-first')topicChatPhase='responding-first';
+      else if(topicChatPhase==='waiting-second')topicChatPhase='responding-second';
+      else if(topicChatPhase!=='responding-first'&&topicChatPhase!=='responding-second')return;
+      const round=topicChatPhase==='responding-first'?1:2;const learnerAnswer=composeUserAnswer(text)||normalizeUserSegment(text);voice.updateLesson(lessonContext());generateStructuredTopicReply(round,learnerAnswer);return
+    },
+    onAiText:text=>{
+      if(!text)return;
+      $('#transcript').textContent='Lindsey 正在回答…';
+      if(scriptedMode==='material'){updateMaterialReading(text);return}
+      renderAiSentenceCards(text,scriptedMode?scriptedZh:'');
+    },
+    onBilingualCaption:caption=>{
+      if(!tryApplyBilingualCaption(caption))pendingBilingualCaptions.push(caption);
+    },
+    onAudioRetry:()=>{$('#status').textContent='语音正在恢复';$('#callState').textContent='重新缓冲本句';$('#transcript').textContent='刚才的音频没有完整到达，Lindsey 正在自动重新播放这一句。'},
+    onSuppressedResponseDone:()=>{
+      if(readyVoicePending){startReadyAcknowledgement();return}
+      if(topicSuppressionPending){topicSuppressionPending=false;maybeStartStructuredTopicReply();return}
+      const action=practicePendingAction;practicePendingAction=null;
+      if(action==='advance'){practiceActionTimer=setTimeout(()=>{practiceActionTimer=null;completeLearnerAction(true)},250);return}
+      if(action==='nudge'){practiceActionTimer=setTimeout(()=>{practiceActionTimer=null;startScriptedSentenceSequence('practice-nudge','Mm-hm, keep going.','嗯哼，继续。')},350);return}
+      $('#status').textContent='正在听';
+    },
+    onTurnDone:event=>{
+      aiTurnPlaybackFinished=true;
+      if(skipFullAnswerRequested){finishSkipFullAnswer();return}
+      if(event?.canceled){
+        if(!scriptedMode&&topicChatActive())discardInterruptedAiTurn();
+        scriptedMode=null;scriptedMessageIndex=null;dynamicAiIndex=null;
+        return
+      }
+      finalizeAiCardTurn(scriptedMode?scriptedText:voice.aiTranscript,scriptedMode?scriptedZh:'');
+      flushPendingBilingualCaptions();
+      if(scriptedMode==='stage'&&stages[step].listeningRetell){listeningRetellTargetIndexes=[...aiTurnCardIndexes];listeningRetellTargetIndexes.forEach(index=>updateMessage(index,{concealed:true,speaking:false}));$('#transcript').textContent='现在凭听力和记忆复述这句话。'}
+      if(!scriptedMode){lastUntranslatedAiCardIndexes=[...aiTurnCardIndexes]}
+      if(scriptedMode&&continueScriptedSentenceSequence())return;
+      if(scriptedMode==='opening'){
+        voice.setMicrophoneInputEnabled(true);
+        scriptedMode=null;scriptedMessageIndex=null;showReadyGate();return;
+      }
+      if(scriptedMode==='ready-ack'){
+        scriptedMode=null;scriptedMessageIndex=null;startAnswerCountdown();return;
+      }
+      if(scriptedMode==='follow-ready-ack'){
+        scriptedMode=null;scriptedMessageIndex=null;readyGate.classList.remove('show');$('#status').textContent='LINDSEY 正在示范第一句';setTimeout(speakCurrent,900);return;
+      }
+      if(scriptedMode==='recall-ready-ack'){
+        scriptedMode=null;scriptedMessageIndex=null;readyGate.classList.remove('show');$('#status').textContent='LINDSEY 正在读，请仔细听';setTimeout(speakCurrent,900);return;
+      }
+      if(scriptedMode==='material'){
+        const completedIndex=materialSequenceIndex;const pauseMs=materialPauseMs(completedIndex);scriptedMode='material-pause';$('#status').textContent='留一点时间看字幕';$('#transcript').textContent=completedIndex<0?'准备听第一句…':'可以看一下这句的英文和翻译';materialPauseTimer=setTimeout(()=>{if(completedIndex>=sentences.length-1){beginTopicChat();return}materialSequenceIndex=completedIndex+1;speakMaterialSegment()},pauseMs);return;
+      }
+      if(scriptedMode==='question'){scriptedMode=null;topicChatPhase='waiting-first';startLearnerReplyWindow();return}
+      if(scriptedMode==='silence-nudge'){scriptedMode=null;waitingForLearnerReply=true;replyAssist.classList.add('show');$('#status').textContent='正在听';return}
+      if(scriptedMode==='practice-nudge'){scriptedMode=null;$('#status').textContent='正在听';$('#transcript').textContent='继续跟读这一句，Lindsey 正在听。';return}
+      if(scriptedMode==='topic-first-structured'){scriptedMode=null;topicChatPhase='waiting-second';startLearnerReplyWindow();return}
+      if(scriptedMode==='topic-second-structured'){scriptedMode=null;topicChatPhase='bridging';topicChatPauseTimer=setTimeout(()=>{topicChatPauseTimer=null;startScriptedSentenceSequence('topic-bridge','Alright—I’ll read one sentence at a time, and you repeat after me. Let’s start with the first sentence.','好，接下来我每次读一句，你跟着重复一句。我们从第一句开始。')},800);return}
+      if(scriptedMode==='topic-bridge'){scriptedMode=null;enterFollowReadiness();return}
+      if(scriptedMode==='silence-bridge'){scriptedMode=null;enterFollowReadiness();return}
+      if(!scriptedMode&&practiceLearnerTurnReady){practiceLearnerTurnReady=false;return}
+      scriptedMode=null;dynamicAiIndex=null;
+    },
+    onError:message=>{$('#status').textContent='连接失败';$('#callState').textContent='连接失败';$('#play').disabled=false;$('#play').textContent='● 重试连接';toast(message)}
+  });
+  if(selfTestStage==='caption-stream'){
+    voice.handleMessage(JSON.stringify({type:'conversation.item.input_audio_transcription.started'}));
+    ['I use','I use WeChat',' every day','day because it is useful'].forEach((delta,index)=>setTimeout(()=>voice.handleMessage(JSON.stringify({type:'conversation.item.input_audio_transcription.delta',delta})),250*(index+1)));
+  }
+  if(selfTestStage==='caption-revision'){
+    voice.handleMessage(JSON.stringify({type:'conversation.item.input_audio_transcription.started'}));
+    [
+      "I think it's WeChat and I use it every day",
+      'I think it is WeChat, and I use it every day because it helps me',
+      'I think it is WeChat, and I use it every day because it helps me study English'
+    ].forEach((delta,index)=>setTimeout(()=>{
+      voice.handleMessage(JSON.stringify({type:'conversation.item.input_audio_transcription.delta',delta}));
+      const shown=$('#messages .chat-message.user:last-child .en')?.textContent||'';
+      const history=JSON.parse(document.documentElement.dataset.captionRevisionHistory||'[]');
+      history.push(shown);
+      document.documentElement.dataset.captionRevision=shown;
+      document.documentElement.dataset.captionRevisionHistory=JSON.stringify(history);
+    },250*(index+1)));
+  }
+  if(selfTestStage==='ai-sentence-reveal'){
+    voice.emit('onState','ai-speaking');
+    voice.emit('onAiText','That makes sense. What do you use it for');
+    setTimeout(()=>voice.emit('onTurnDone',{canceled:false}),650);
+  }
+  if(selfTestStage==='ready-voice'){
+    voice.suppressNextResponse=()=>{document.documentElement.dataset.readySuppressed='yes';setTimeout(()=>voice.emit('onSuppressedResponseDone'),40)};
+    voice.sendText=text=>{const spoken=JSON.parse(document.documentElement.dataset.readySpoken||'[]');spoken.push(text);document.documentElement.dataset.readySpoken=JSON.stringify(spoken);document.documentElement.dataset.readyNext=text;setTimeout(()=>voice.emit('onTurnDone',{canceled:false}),35)};
+    showReadyGate('follow');
+    voice.emit('onUserFinalText',"Yes, I'm ready.");
+    voice.emit('onUserTurnDone',"Yes, I'm ready.");
+    document.documentElement.dataset.readyPracticeAction=practicePendingAction||'none';
+  }
+  if(selfTestStage==='ready-opening-flow'){
+    const spoken=[];
+    voice.suppressNextResponse=()=>setTimeout(()=>voice.emit('onSuppressedResponseDone'),40);
+    voice.sendText=text=>{spoken.push({text,at:Date.now()});document.documentElement.dataset.openingSpoken=JSON.stringify(spoken);setTimeout(()=>voice.emit('onTurnDone',{canceled:false}),35)};
+    showReadyGate('opening');
+    voice.emit('onUserFinalText',"Yes, I'm ready.");
+    voice.emit('onUserTurnDone',"Yes, I'm ready.");
+  }
+  if(selfTestStage==='ready-live-repeated'){
+    voice.commitAudio=()=>{document.documentElement.dataset.readyCommitted='yes'};
+    voice.suppressNextResponse=()=>{document.documentElement.dataset.readySuppressed='yes';setTimeout(()=>voice.emit('onSuppressedResponseDone'),40)};
+    voice.sendText=text=>{const spoken=JSON.parse(document.documentElement.dataset.readySpoken||'[]');spoken.push(text);document.documentElement.dataset.readySpoken=JSON.stringify(spoken);document.documentElement.dataset.readyNext=text;setTimeout(()=>voice.emit('onTurnDone',{canceled:false}),35)};
+    showReadyGate('opening');
+    voice.handleMessage(JSON.stringify({type:'conversation.item.input_audio_transcription.started'}));
+    ["I'm ready"," I'm ready"," I'm ready"].forEach((delta,index)=>setTimeout(()=>voice.handleMessage(JSON.stringify({type:'conversation.item.input_audio_transcription.delta',delta})),80*(index+1)));
+  }
+  if(selfTestStage==='follow-complete'||selfTestStage==='follow-nudge'){
+    voice.sessionCreated=true;voice.updateLesson=()=>{};
+    voice.suppressNextResponse=()=>{document.documentElement.dataset.practiceSuppressed='yes';setTimeout(()=>voice.emit('onSuppressedResponseDone'),40)};
+    voice.sendText=text=>{document.documentElement.dataset.practiceNext=text};
+    const sample=selfTestStage==='follow-complete'?sentences[0].en:'People in China use social media';
+    voice.emit('onUserTurnDone',sample);
+  }
+  if(selfTestStage==='topic-turn-pacing'){
+    topicChatPhase='responding-first';
+    voice.sendText=text=>{document.documentElement.dataset.topicPrompt=text;setTimeout(()=>voice.emit('onTurnDone',{canceled:false}),30)};
+    voice.emit('onTurnDone',{canceled:false});
+    setTimeout(()=>{document.documentElement.dataset.topicAwaiting=String(topicWaitingForLearner());voice.interrupt=()=>{document.documentElement.dataset.topicLocked='yes';voice.aiSpeaking=false};voice.aiSpeaking=true;voice.emit('onState','ai-speaking')},1020);
+  }
+  if(selfTestStage==='topic-closing-pacing'){
+    topicChatPhase='responding-second';voice.sessionCreated=true;voice.updateLesson=()=>{};
+    const spoken=[];voice.sendText=text=>{spoken.push({text,at:Date.now()});document.documentElement.dataset.closingSpoken=JSON.stringify(spoken);voice.emit('onState','ai-speaking');voice.emit('onAiText',text);setTimeout(()=>voice.emit('onTurnDone',{canceled:false}),35)};
+    voice.emit('onTurnDone',{canceled:false});
+  }
+  if(selfTestStage==='caption-pairing'){
+    const firstCaptionCard=addMessage('ai','Take your time.');
+    const secondCaptionCard=addMessage('ai','That’s a nice, intentional way to use them.');
+    const placeholderTextBefore=dialogueLog[firstCaptionCard].zh||'翻译生成中…';
+    voice.emit('onBilingualCaption',{english:'That’s a nice, intentional way to use them.',chinese:'这是一种很有意识、很不错的使用方式。'});
+    voice.emit('onBilingualCaption',{english:'Take your time.',chinese:'慢慢来。'});
+    voice.emit('onBilingualCaption',{english:'An unrelated old sentence.',chinese:'这句旧翻译不应贴到任何当前卡片。'});
+    document.documentElement.dataset.captionPairing=JSON.stringify({placeholderTextBefore,first:dialogueLog[firstCaptionCard],second:dialogueLog[secondCaptionCard],pending:pendingBilingualCaptions.length});
+  }
+  if(selfTestStage==='topic-question-captions'){
+    const generatedOpening={english:'What part of this topic feels most familiar in your own life?',chinese:'这个话题中，哪一部分与你自己的生活最贴近？'};
+    beginAiCardTurn();renderAiSentenceCards(generatedOpening.english,generatedOpening.chinese);finalizeAiCardTurn(generatedOpening.english,generatedOpening.chinese);
+    document.documentElement.dataset.topicQuestionCaptions=JSON.stringify(aiTurnCardIndexes.map(index=>dialogueLog[index]));
+  }
+  if(selfTestStage==='structured-topic-json'){
+    const spoken=[];voice.sessionCreated=true;voice.updateLesson=()=>{};
+    voice.suppressNextResponse=()=>setTimeout(()=>voice.emit('onSuppressedResponseDone'),40);
+    voice.sendText=text=>{spoken.push(text);voice.emit('onState','ai-speaking');voice.emit('onAiText',text);setTimeout(()=>{voice.emit('onTurnDone',{canceled:false});if(text.startsWith('Alright'))setTimeout(()=>{document.documentElement.dataset.structuredTopicJson=JSON.stringify({spoken,phase:topicChatPhase,step})},120)},35)};
+    topicChatPhase='waiting-first';const firstAnswer='I use social media to learn English and keep in touch with friends.';finalizeUserTranscript(firstAnswer);voice.emit('onUserTurnDone',firstAnswer);
+    const waitForSecond=setInterval(()=>{if(topicChatPhase!=='waiting-second')return;clearInterval(waitForSecond);const secondAnswer='I often open it when I want to relax after work.';finalizeUserTranscript(secondAnswer);voice.emit('onUserTurnDone',secondAnswer)},100);
+    setTimeout(()=>{clearInterval(waitForSecond);if(!document.documentElement.dataset.structuredTopicJson)document.documentElement.dataset.structuredTopicJson=JSON.stringify({spoken,phase:topicChatPhase,step,timeout:true})},20000)
+  }
+
+  async function speakCurrent(){
+    const stage=stages[step];
+    let text=stage.coachEn;
+    if(stage.sentencePractice)text=sentences[sentenceIndex].en;
+    if(stage.sentenceRetell)text=coachFollowup||stage.coachEn;
+    const zh=scriptedTranslation(stage,text);
+    $('#status').textContent='正在连接';$('#callState').textContent='连接中';$('#play').disabled=true;
+    try{
+      if(!voice.sessionCreated){
+        if(directTopicStart||selfTestStage==='topic'){
+          prepareTopicChat();topicChatPhase='preparing-first';pendingBilingualCaptions=[];
+          const opening=selfTestStage==='topic'?{english:'What part of this topic feels most familiar in your own life?',chinese:'这个话题中，哪一部分与你自己的生活最贴近？'}:await requestTopicOpeningQuestion();
+          topicChatPhase='asking-first';
+          const topicLesson=lessonContext();topicLesson.endSmoothWindowMs=3200;topicLesson.turnTaking='Preserve native full-duplex turn-taking. If the learner continues or resumes speaking, yield immediately, keep listening, and base the next response on the complete answer including the continuation.';
+          const topicFirst=prepareScriptedSentenceSequence('question',opening.english,opening.chinese);
+          await voice.connect({lesson:topicLesson,greeting:topicFirst.en});return;
+        }
+        if(selfTestStage){
+          beginScriptedSpeech('stage',text,zh);resetAndRevealMaterial();
+          await voice.connect({lesson:lessonContext(),greeting:text});
+          return;
+        }
+        voice.setMicrophoneInputEnabled(false);
+        const openingFirst=prepareScriptedSentenceSequence('opening',flow.opening.spokenEn,flow.opening.subtitleZh);
+        updateCoachPanel();$('#transcript').textContent='Lindsey 正在介绍今天的任务…';
+        await voice.connect({lesson:lessonContext(),greeting:openingFirst.en});
+      }else{
+        resetAndRevealMaterial();
+        voice.updateLesson(lessonContext());
+        if(stage.listeningRetell)startListeningRetellUnit(text,zh);else startScriptedSentenceSequence('stage',text,zh);
+      }
+    }catch(error){voice.setMicrophoneInputEnabled(true);$('#status').textContent='连接失败';$('#callState').textContent='连接失败';$('#play').disabled=false;$('#play').textContent='● 重试连接';toast(error.message||'实时语音启动失败')}
+  }
+
+  function render(){
+    const stage=stages[step];
+    const phaseIndex=phaseIndexForStep(step);const phase=phases[phaseIndex];
+    $('#num').textContent='阶段 '+(phaseIndex+1)+' / '+phases.length;$('#stage').textContent=actionTitles[step];$('#stageHint').textContent=stage.hint;
+    if(directTopicStart&&!voice.sessionCreated){$('#num').textContent='专项测试';$('#stage').textContent='从自由对话开始';$('#stageHint').textContent='连接麦克风后，Lindsey 会直接提出第一道 personal question。'}
+    updateCoachPanel();
+    [...document.querySelectorAll('.phase-item')].forEach((item,index)=>item.className='phase-item '+(index<phaseIndex?'done':index===phaseIndex?'current':''));
+    [...document.querySelectorAll('.phase-item .bar')].forEach((bar,index)=>bar.className='bar '+(index<phaseIndex?'done':index===phaseIndex?'current':''));
+    $('#done').textContent=stage.listeningRetell?'这一句复述完了':stage.sentencePractice?'这一句跟读完了':stage.sentenceRetell?'这句我说完了':stage.button||'我说完了';
+    $('#transcript').textContent=!voice.sessionCreated?(directTopicStart?'点击“连接实时语音”，直接测试自由对话。':'点击“连接实时语音”，允许麦克风后即可对话。'):step===4?'准备中：只看英文关键词和中文翻译，准备好后继续。':stage.listeningRetell?'英文已隐藏。听完后凭记忆复述；想不起来可查看本步材料。':stage.sentencePractice?'AI 正在等你跟读第 '+(sentenceIndex+1)+' 句。':stage.sentenceRetell?'说完这一句后，AI 教练会肯定你并给出下一句任务。':'AI 正在听。你可以继续说；说完后点“'+$('#done').textContent+'”。';
+    renderMaterial();renderConversation();
+  }
+
+  $('#play').onclick=speakCurrent;
+  $('#materialToggle').onclick=()=>{materialRevealed=!materialRevealed;renderMaterial()};
+  function completeLearnerAction(automatic=false){
+    const status=$('#status');const stage=stages[step];status.textContent='LINDSEY 正在听';
+    if(topicChatActive()){voice.commitAudio();$('#transcript').textContent='收到，Lindsey 正在听完你的完整回答…';return}
+    if(stage.listeningRetell&&!automatic&&listeningRetellTargetIndexes.some(index=>dialogueLog[index]?.concealed)){revealListeningTarget();setTimeout(()=>completeLearnerAction(true),1800);return}
+    if((stage.sentencePractice||stage.sentenceRetell)&&sentenceIndex<sentences.length-1){coachFollowup=stage.sentenceRetell?sentences[sentenceIndex].praiseEn:'';sentenceIndex++;clearTimeout(practiceActionTimer);practiceActionTimer=null;practiceSpokenSegments=[];practicePendingAction=null;render();voice.updateLesson(lessonContext());status.textContent='LINDSEY 正在说';speakCurrent();return}
+    coachFollowup='';$('#transcript').textContent='本步骤已完成，进度已保存。';
+    if(step===8){
+      const closing='You\u2019ve completed today\u2019s practice. You can now express the main ideas with only the Chinese meaning as support. Next time, we\u2019ll bring this answer back with fewer prompts. You can finish here for today.';
+      const closingZh='你已经完成了今天的练习。现在只借助中文意思，也能表达主要观点。下次我们会用更少的提示再次复习。今天可以安心结束了。';
+      $('#goal').textContent='今天已完成：你能在无提示下独立完成这道题的观点与展开。';$('#stage').textContent='今天的任务已经完成';$('#stageHint').textContent='你已经完成了听懂、跟熟、组织和说出四个阶段。';document.querySelector('.coach-card small').textContent='课程状态';$('#coachText').textContent='Lesson complete.';
+      showCaption(closing,closingZh);startScriptedSentenceSequence('stage',closing,closingZh);toast('本节已完成，训练记录已保存');return;
+    }
+    setTimeout(()=>{step++;sentenceIndex=0;practiceSpokenSegments=[];practicePendingAction=null;materialRevealed=false;render();voice.updateLesson(lessonContext());status.textContent='LINDSEY 正在引导';if(stages[step].listeningRetell){showReadyGate('recall');return}speakCurrent()},automatic?650:350)
+  }
+  $('#done').onclick=()=>completeLearnerAction(false);
+  $('#pause').onclick=()=>{if(scriptedMode==='opening'||scriptedSequenceMode==='opening'){clearTimeout(scriptedSentencePauseTimer);scriptedSentencePauseTimer=null;scriptedSentenceQueue=[];scriptedSequenceMode=null;scriptedMode=null;voice.setMicrophoneInputEnabled(true);voice.interrupt();hideCaption();showReadyGate();toast('已跳过开场，可以准备开始');return}if(skipFullAnswerAvailable&&(scriptedMode==='material'||scriptedMode==='material-pause')){skipFullAnswerRequested=true;const wasSpeaking=voice.aiSpeaking;if(wasSpeaking)voice.interrupt();$('#transcript').textContent='正在跳过本次朗读…';if(!wasSpeaking){finishSkipFullAnswer();return}clearTimeout(skipFullAnswerTimer);skipFullAnswerTimer=setTimeout(finishSkipFullAnswer,900);return}voice.interrupt();hideCaption();toast('已打断 AI，你可以立即继续说')};
+  $('#finish').onclick=async()=>{await voice.disconnect();hideCaption();toast('实时通话已结束，当前进度已保留')};
+  $('#exit').onclick=async()=>{await voice.disconnect();hideCaption();toast('已保存进度并退出本节课')};
+  $('#export-png').onclick=async()=>{await document.fonts.ready;const canvas=await html2canvas($('#artboard'),{scale:1,useCORS:true,backgroundColor:'#fbfaff'});const link=document.createElement('a');link.download='lindsey-ai-coach-voice-room-v5.png';link.href=canvas.toDataURL('image/png');link.click()};
+  render();
+  if(pageParams.get('portraitPreview')==='talking'){$('#coachPortrait').classList.add('is-talking');$('#status').textContent='LINDSEY 正在说'}
+</script></body></html>

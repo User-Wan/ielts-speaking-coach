@@ -1,5 +1,7 @@
 # IELTS Speaking Coach
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 A GitHub-ready IELTS Speaking desktop app, Codex plugin, and local MCP workflow:
 
 - launch ChatGPT Voice from a Windows or macOS desktop dashboard;

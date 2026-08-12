@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我开源了1w+人看过的ChatGPT雅思口语练习工具｜V4</title>
+  <style>
+    :root {
+      --artboard-width: 1242px;
+      --artboard-height: 1660px;
+      --page-bg: #e7e7eb;
+      --paper: #f5f5f7;
+      --ink: #18181b;
+      --muted: #6f6f77;
+      --purple: #5547b5;
+      --blue: #3272de;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body { background: var(--page-bg); color: var(--ink); font-family: Inter, "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif; }
+    .workspace { width: max-content; margin: 38px auto 64px; }
+    .artboard {
+      position: relative;
+      width: var(--artboard-width);
+      height: var(--artboard-height);
+      overflow: hidden;
+      padding: 52px 72px 48px;
+      background: var(--paper);
+      isolation: isolate;
+    }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      border-bottom: 2px solid #dedee5;
+      color: var(--purple);
+      font-size: 16px;
+      font-weight: 850;
+      letter-spacing: .14em;
+    }
+    .eyebrow span:last-child { color: #8c8c94; font-family: ui-monospace, Consolas, monospace; font-weight: 700; letter-spacing: .08em; }
+    .title-block { margin-top: 38px; }
+    h1 {
+      margin: 0;
+      font-size: 128px;
+      line-height: 1.12;
+      letter-spacing: -.06em;
+      font-weight: 900;
+    }
+    h1 .lead { display: block; font-size: inherit; line-height: inherit; letter-spacing: inherit; }
+    h1 .impact { display: block; margin-top: 0; font-size: inherit; line-height: inherit; }
+    h1 .number { color: var(--purple); }
+    h1 .product { display: block; margin-top: 0; }
+    h1 .tool { display: block; }
+    .subline {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 22px;
+      font-weight: 650;
+    }
+    .subline::before { content: ""; width: 52px; height: 8px; border-radius: 99px; background: var(--blue); }
+    .screenshot-frame {
+      position: absolute;
+      left: 36px;
+      right: 36px;
+      bottom: 48px;
+      margin: 0;
+      overflow: hidden;
+      border: 2px solid #dedee5;
+      border-radius: 30px;
+      background: #fff;
+      box-shadow: 0 30px 70px rgba(40, 37, 66, .18);
+    }
+    .screenshot-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .export-controls { display: flex; justify-content: center; margin-top: 22px; }
+    .export-button {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 24px;
+      background: var(--blue);
+      color: #fff;
+      font: 800 16px/1 Inter, "Microsoft YaHei", sans-serif;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(50, 114, 222, .24);
+    }
+    .export-button:disabled { cursor: wait; opacity: .65; }
+    .export-status { min-height: 20px; margin: 10px 0 0; color: #4d4d55; text-align: center; font-size: 13px; }
+    body.render-mode { overflow: hidden; background: transparent; }
+    body.render-mode .workspace { margin: 0; }
+    body.render-mode .export-controls { display: none; }
+  </style>
+</head>
+<body>
+  <main class="workspace">
+    <section id="artboard" class="artboard" aria-label="小红书封面画布">
+      <div class="eyebrow"><span>OPEN SOURCE · IELTS SPEAKING</span><span>CHATGPT TOOL</span></div>
+      <div class="title-block">
+        <h1>
+          <span class="lead">我开源了</span>
+          <span class="impact"><span class="number">1w+</span>人看过的</span>
+          <span class="product">ChatGPT雅思口语</span>
+          <span class="tool">练习工具</span>
+        </h1>
+      </div>
+      <figure class="screenshot-frame">
+        <img src="assets/product-download-page.png" alt="IELTS Speaking Coach 下载页面截图" />
+      </figure>
+    </section>
+
+    <div id="export-controls" class="export-controls">
+      <div>
+        <button id="export-png" class="export-button" type="button">⇩ 导出 PNG</button>
+        <p id="export-status" class="export-status" aria-live="polite"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script>
+    if (new URLSearchParams(location.search).get('render') === '1') {
+      document.body.classList.add('render-mode');
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      window.scrollTo(0, 0);
+    }
+    const button = document.getElementById('export-png');
+    const status = document.getElementById('export-status');
+    const artboard = document.getElementById('artboard');
+
+    async function waitForImages(root) {
+      const images = [...root.querySelectorAll('img')];
+      await Promise.all(images.map((img) => {
+        if (img.complete && img.naturalWidth > 0) return Promise.resolve();
+        return new Promise((resolve, reject) => {
+          img.addEventListener('load', resolve, { once: true });
+          img.addEventListener('error', () => reject(new Error(`图片加载失败：${img.src}`)), { once: true });
+        });
+      }));
+    }
+
+    button.addEventListener('click', async () => {
+      button.disabled = true;
+      status.textContent = '正在生成 PNG…';
+      try {
+        if (!window.html2canvas) throw new Error('PNG 导出组件未加载，请联网后刷新页面');
+        await document.fonts.ready;
+        await waitForImages(artboard);
+        const canvas = await html2canvas(artboard, {
+          backgroundColor: null,
+          scale: 1,
+          useCORS: true,
+          logging: false,
+          width: 1242,
+          height: 1660,
+          windowWidth: 1242,
+          windowHeight: 1660
+        });
+        const link = document.createElement('a');
+        link.download = 'xhs-cover-chatgpt-ielts-speaking-v4.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        status.textContent = `已导出 ${canvas.width} × ${canvas.height} PNG`;
+      } catch (error) {
+        status.textContent = `导出失败：${error.message}`;
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>小红书第5页｜ChatGPT Voice 模拟｜V1</title>
+  <style>
+    :root {
+      --artboard-width: 1242px;
+      --artboard-height: 1660px;
+      --page-bg: #e7e7eb;
+      --paper: #f5f5f7;
+      --surface: #ffffff;
+      --ink: #18181b;
+      --muted: #6f6f77;
+      --line: #dedee5;
+      --purple: #5547b5;
+      --purple-soft: #eeebff;
+      --blue: #3272de;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background: var(--page-bg);
+      color: var(--ink);
+      font-family: Inter, "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+    }
+
+    .workspace { width: max-content; margin: 38px auto 64px; }
+    .artboard {
+      position: relative;
+      width: var(--artboard-width);
+      height: var(--artboard-height);
+      overflow: hidden;
+      padding: 52px 72px 48px;
+      background: var(--paper);
+      isolation: isolate;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      border-bottom: 2px solid var(--line);
+      color: var(--purple);
+      font-size: 16px;
+      font-weight: 850;
+      letter-spacing: .14em;
+    }
+    .eyebrow span:last-child {
+      color: #8c8c94;
+      font-family: ui-monospace, Consolas, monospace;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .title-block { margin-top: 34px; }
+    h1 {
+      margin: 0;
+      font-size: 70px;
+      line-height: 1.13;
+      letter-spacing: -.025em;
+      font-weight: 880;
+    }
+    h1 span { display: block; white-space: nowrap; }
+    h1 .accent { color: var(--purple); }
+    .core-copy {
+      max-width: 1030px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 25px;
+      line-height: 1.5;
+      font-weight: 650;
+    }
+    .keep { white-space: nowrap; }
+
+    .evidence { margin-top: 32px; }
+    .evidence-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .section-kicker {
+      color: var(--purple);
+      font-size: 15px;
+      font-weight: 850;
+      letter-spacing: .12em;
+    }
+    .evidence-head strong {
+      display: block;
+      margin-top: 6px;
+      font-size: 28px;
+      line-height: 1.2;
+      letter-spacing: -.01em;
+    }
+    .evidence-head span:last-child {
+      color: var(--muted);
+      font-size: 17px;
+      font-weight: 650;
+    }
+    .screenshot-frame {
+      height: 585px;
+      margin: 0;
+      overflow: hidden;
+      border: 2px solid var(--line);
+      border-radius: 26px;
+      background: #fff;
+      box-shadow: 0 24px 55px rgba(40, 37, 66, .16);
+    }
+    .screenshot-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .flow-section { margin-top: 31px; }
+    .flow-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      padding-bottom: 13px;
+      border-bottom: 2px solid var(--line);
+    }
+    .flow-title strong {
+      font-size: 24px;
+      line-height: 1.2;
+    }
+    .flow-title span:last-child {
+      color: #92929a;
+      font: 750 15px/1 ui-monospace, Consolas, monospace;
+      letter-spacing: .08em;
+    }
+    .flow-row {
+      display: grid;
+      grid-template-columns: 1.25fr 50px 1fr 50px 1fr;
+      align-items: center;
+    }
+    .flow-step {
+      min-height: 104px;
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      padding: 20px 24px;
+      border: 2px solid #e3e2e9;
+      border-radius: 20px;
+      background: var(--surface);
+      font-size: 25px;
+      line-height: 1.25;
+      font-weight: 820;
+    }
+    .flow-step b {
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: var(--purple-soft);
+      color: var(--purple);
+      font: 850 16px/1 ui-monospace, Consolas, monospace;
+    }
+    .flow-arrow {
+      color: var(--purple);
+      text-align: center;
+      font-size: 33px;
+      font-weight: 760;
+    }
+
+    .insight {
+      display: grid;
+      grid-template-columns: 9px 1fr;
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 31px;
+      padding: 27px 30px;
+      border-top: 2px solid var(--line);
+      border-bottom: 2px solid var(--line);
+      background: rgba(255,255,255,.48);
+    }
+    .insight::before {
+      content: "";
+      border-radius: 99px;
+      background: var(--purple);
+    }
+    .insight p {
+      margin: 0;
+      font-size: 29px;
+      line-height: 1.42;
+      letter-spacing: -.01em;
+      font-weight: 800;
+    }
+
+    .page-no {
+      position: absolute;
+      right: 72px;
+      bottom: 23px;
+      color: #92929a;
+      font: 750 15px/1 ui-monospace, Consolas, monospace;
+      letter-spacing: .12em;
+    }
+
+    .export-controls { display: flex; justify-content: center; margin-top: 22px; }
+    .export-button {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 24px;
+      background: var(--blue);
+      color: #fff;
+      font: 800 16px/1 Inter, "Microsoft YaHei", sans-serif;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(50, 114, 222, .24);
+    }
+    .export-button:disabled { cursor: wait; opacity: .65; }
+    .export-status { min-height: 20px; margin: 10px 0 0; color: #4d4d55; text-align: center; font-size: 13px; }
+    body.render-mode { overflow: hidden; background: transparent; }
+    body.render-mode .workspace { margin: 0; }
+    body.render-mode .export-controls { display: none; }
+  </style>
+</head>
+<body>
+  <main class="workspace">
+    <section id="artboard" class="artboard" aria-label="小红书第5页 ChatGPT Voice 模拟画布">
+      <div class="eyebrow"><span>02 · CHATGPT VOICE</span><span>IELTS SPEAKING COACH</span></div>
+
+      <header class="title-block">
+        <h1>
+          <span>不用再输 Prompt，</span>
+          <span class="accent">选好当天练题计划就能开练</span>
+        </h1>
+        <p class="core-copy">不用反复设置、重新写提示词。选择当日练题计划后，工具会自动开启 ChatGPT Voice，直接围绕当天题目开始练习；结束后回到工具复盘。需要更自由时，也可以选择<span class="keep">“自由畅练当日题目”</span>。</p>
+      </header>
+
+      <section class="evidence" aria-label="ChatGPT Voice 训练入口真实截图">
+        <div class="evidence-head">
+          <div><span class="section-kicker">VOICE BRIDGE · REAL UI</span><strong>选好当日计划，自动开启 ChatGPT Voice</strong></div>
+          <span>首页真实界面</span>
+        </div>
+        <figure class="screenshot-frame">
+          <img src="../xhs-feature-screenshots/output/01-training-home.png" alt="IELTS Speaking Coach Voice Bridge 首页真实截图" />
+        </figure>
+      </section>
+
+      <section class="flow-section" aria-label="ChatGPT Voice 口语训练流程">
+        <div class="flow-title">
+          <strong>一场练习，只沿着三步走</strong>
+          <span>FREE PRACTICE · THEN REVIEW</span>
+        </div>
+        <div class="flow-row">
+          <div class="flow-step"><b>01</b><span>选择当日练题计划</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><b>02</b><span>自动开启 Voice</span></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step"><b>03</b><span>结束后复盘</span></div>
+        </div>
+      </section>
+
+      <section class="insight" aria-label="产品设计说明">
+        <p>它不重新造一个聊天机器人，而是把你已有的 Voice 能力接进一套可持续的口语训练。</p>
+      </section>
+
+      <div class="page-no">05 / CHATGPT VOICE</div>
+    </section>
+
+    <div id="export-controls" class="export-controls">
+      <div>
+        <button id="export-png" class="export-button" type="button">⇩ 导出 PNG</button>
+        <p id="export-status" class="export-status" aria-live="polite"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script>
+    if (new URLSearchParams(location.search).get('render') === '1') {
+      document.body.classList.add('render-mode');
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      window.scrollTo(0, 0);
+    }
+
+    const button = document.getElementById('export-png');
+    const status = document.getElementById('export-status');
+    const artboard = document.getElementById('artboard');
+
+    async function waitForImages(root) {
+      const images = [...root.querySelectorAll('img')];
+      await Promise.all(images.map((img) => {
+        if (img.complete && img.naturalWidth > 0) return Promise.resolve();
+        return new Promise((resolve, reject) => {
+          img.addEventListener('load', resolve, { once: true });
+          img.addEventListener('error', () => reject(new Error(`图片加载失败：${img.src}`)), { once: true });
+        });
+      }));
+    }
+
+    button.addEventListener('click', async () => {
+      button.disabled = true;
+      status.textContent = '正在生成 PNG…';
+      try {
+        if (!window.html2canvas) throw new Error('PNG 导出组件未加载，请联网后刷新页面');
+        await document.fonts.ready;
+        await waitForImages(artboard);
+        const canvas = await html2canvas(artboard, {
+          backgroundColor: null,
+          scale: 1,
+          useCORS: true,
+          logging: false,
+          width: 1242,
+          height: 1660,
+          windowWidth: 1242,
+          windowHeight: 1660
+        });
+        const link = document.createElement('a');
+        link.download = 'xhs-page-05-chatgpt-voice-v1.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        status.textContent = `已导出 ${canvas.width} × ${canvas.height} PNG`;
+      } catch (error) {
+        status.textContent = `导出失败：${error.message}`;
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

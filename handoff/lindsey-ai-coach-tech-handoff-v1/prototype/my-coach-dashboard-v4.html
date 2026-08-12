@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>我的 AI 教练｜Lindsey</title>
+  <style>
+    :root{--w:1440px;--h:1200px;--p:#6650dd;--ink:#29243b;--muted:#817b90;--line:#e8e4ef;--bg:#faf9fd;--lav:#f1eeff;--green:#2b9d73}*{box-sizing:border-box}body{margin:0;background:#e8e7ef;color:var(--ink);font-family:"Microsoft YaHei","Noto Sans SC",Arial,sans-serif}.workspace{width:max-content;margin:28px auto}#artboard{width:var(--w);height:var(--h);overflow:hidden;background:var(--bg)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;padding:0 94px;border-bottom:1px solid var(--line);background:#fff}.brand{display:flex;gap:10px;align-items:center}.logo{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(145deg,#806bf0,#5944cd);color:#fff;font-weight:900}.brand b{font-size:15px}.brand small{display:block;margin-top:3px;color:#968fa1;font-size:10px}.nav-links{display:flex;align-items:center;gap:28px}.nav-links button{padding:9px 0;border:0;border-bottom:2px solid transparent;background:transparent;color:#777184;font:inherit;font-size:13px;font-weight:900;cursor:pointer}.nav-links button.active{border-color:var(--p);color:#5741cb}.account{display:flex;align-items:center;gap:9px;color:#5f596b;font-size:12px;font-weight:900}.avatar{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:#6c57dd;color:#fff}.wrap{padding:46px 122px}.eyebrow{color:#745ee0;font-size:11px;font-weight:900;letter-spacing:.12em}.head{display:flex;justify-content:space-between;align-items:end}.head h1{margin:9px 0 0;font-size:30px;letter-spacing:-1px}.plan{padding:10px 14px;border:1px solid #ddd7f1;border-radius:99px;background:#fff;color:#5f49cf;font-size:12px;font-weight:900}.grid{display:grid;grid-template-columns:1.6fr .82fr;gap:21px;margin-top:27px}.today{padding:31px;border-radius:24px;color:#fff;background:linear-gradient(135deg,#755fe8,#5240bb);box-shadow:0 18px 34px #5e48d32c}.today .label{color:#dad4ff;font-size:11px;font-weight:900;letter-spacing:.12em}.today h2{margin:13px 0 8px;font-size:25px}.today p{margin:0;color:#f0edff;font-size:14px}.chips{display:flex;gap:9px;flex-wrap:wrap;margin:21px 0}.chips span{padding:8px 11px;border-radius:9px;background:#ffffff1c;color:#faf9ff;font-size:12px}.primary{padding:14px 17px;border:0;border-radius:12px;background:#fff;color:#5641c5;font:inherit;font-size:14px;font-weight:900;cursor:pointer}.stats{padding:25px;border:1px solid var(--line);border-radius:23px;background:#fff}.stats h3,.section h3{margin:0;font-size:16px}.value{display:flex;align-items:baseline;gap:7px;margin:18px 0 9px}.value b{color:#5b45ce;font-size:38px;letter-spacing:-2px}.value span{color:var(--muted);font-size:12px}.bar{height:8px;overflow:hidden;border-radius:99px;background:#eeeaf5}.bar i{display:block;width:7%;height:100%;background:var(--p)}.stats p{margin:12px 0 0;color:var(--muted);font-size:12px;line-height:1.6}.section{margin-top:22px;padding:26px;border:1px solid var(--line);border-radius:22px;background:#fff}.section-head{display:flex;justify-content:space-between;align-items:center}.text-btn{border:0;background:none;color:#6350d4;font:inherit;font-size:12px;font-weight:900;cursor:pointer}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:19px}.course{padding:18px;border:1px solid #ebe7f2;border-radius:16px;background:#fff}.course .tiny{color:#8b8498;font-size:11px}.course h4{margin:9px 0;color:#332d43;font-size:14px}.course p{margin:0;color:#898293;font-size:11px;line-height:1.6}.state{display:inline-block;margin-top:15px;padding:6px 9px;border-radius:99px;background:#effbf6;color:#23956a;font-size:11px;font-weight:900}.state.continue{background:#f1eeff;color:#5d49cf}.review{display:flex;gap:11px;margin-top:18px}.review-day{flex:1;min-height:82px;padding:12px;border-radius:13px;background:#f7f6fb;color:#90899b;font-size:11px}.review-day b{display:block;margin-top:10px;color:#41394f;font-size:13px}.review-day.today{background:#6a54dc;color:#fff}.review-day.today b{color:#fff}.bottom{display:grid;grid-template-columns:1.6fr .82fr;gap:21px;margin-top:22px}.record{display:flex;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid #eeeaf4}.record:last-child{border-bottom:0}.record-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:#f1eff8;color:#624fce;font-size:13px}.record b{display:block;font-size:13px}.record small{display:block;margin-top:4px;color:#8a8395;font-size:11px}.record span{margin-left:auto;color:var(--green);font-size:11px;font-weight:900}.order{padding:25px;border-radius:22px;background:#f0edff}.order-top{display:flex;justify-content:space-between}.order b{font-size:15px}.order strong{color:#5540c9;font-size:18px}.order p{margin:9px 0;color:#756e8c;font-size:12px;line-height:1.65}.order button{margin-top:7px;padding:0;border:0;background:none;color:#5d49ce;font:inherit;font-size:12px;font-weight:900;cursor:pointer}.export-controls{display:flex;justify-content:center;margin:18px}.export-button{border:0;border-radius:99px;padding:12px 20px;background:#2744b9;color:#fff;font-weight:800;cursor:pointer}.export-status{text-align:center;color:#566078;font-size:12px}
+</style>
+<style>.screen{display:none}.screen.active{display:block}.course-sub{margin:10px 0 0;color:#817b90;font-size:14px}.pushed-course{margin-top:28px;padding:31px;display:flex;justify-content:space-between;align-items:end;gap:30px;border:1px solid #ded8f2;border-radius:22px;background:#fff;box-shadow:0 14px 30px #5742be0d}.course-source{color:#6b55d7;font-size:11px;font-weight:900;letter-spacing:.08em}.pushed-course h2{margin:13px 0 8px;font-size:24px}.pushed-course p{margin:0;color:#706a7e;font-size:14px}.course-meta{display:flex;gap:9px;margin-top:19px}.course-meta span{padding:8px 11px;border-radius:9px;background:#f2efff;color:#5e49cf;font-size:12px}.course-start{flex:0 0 auto;padding:14px 17px;border:0;border-radius:12px;background:#6852db;color:#fff;font:inherit;font-size:13px;font-weight:900;cursor:pointer}.course-footnote{margin-top:17px;color:#8c8596;font-size:12px}.record-list{max-width:860px;margin-top:28px;padding:8px 26px;border:1px solid #e7e3ef;border-radius:20px;background:#fff}.order-detail{display:flex;justify-content:space-between;align-items:center;max-width:860px;margin-top:28px;padding:29px 31px;border-radius:22px;background:#f0edff}.order-detail h2{margin:12px 0 8px;font-size:22px}.order-detail p{margin:0;color:#756e8c;font-size:13px}.credit{display:flex;align-items:baseline;gap:7px}.credit b{color:#5540c9;font-size:42px;letter-spacing:-2px}.credit span{color:#706981;font-size:13px}</style>
+</head>
+<body>
+<main class="workspace">
+<section id="artboard">
+<header class="nav">
+<div class="brand">
+<div class="logo">L+</div>
+<div>
+<b>Lindsey 的 AI 提分教练</b>
+<small>IELTS speaking practice</small>
+</div>
+</div>
+<nav class="nav-links">
+<button class="active" data-view="today">今日陪练</button>
+<button data-view="courses">我的课程</button>
+<button data-view="records">练习记录</button>
+<button data-view="orders">订单与课时</button>
+</nav>
+<div class="account">
+<span id="account-name">我的账户</span>
+<div class="avatar" id="avatar">L</div>
+</div>
+</header>
+<main class="wrap">
+<section id="home-panel" class="screen active">
+<div class="head">
+<div>
+<div class="eyebrow">MY AI COACH</div>
+<h1 id="page-title">今天，继续把这一题练透</h1>
+</div>
+<div class="plan" id="plan-label">30 课时稳定表达包</div>
+</div>
+<section class="today">
+<div class="label">TODAY'S AI COACHING</div>
+<h2>Why do people prefer living in big cities?</h2>
+<p>目标：把两个核心原因练到能够无提示说出来。</p>
+<div class="chips">
+<span>约 20 分钟</span>
+<span>需要开口 5 次</span>
+<span>Part 3</span>
+</div>
+<button class="primary" id="start-lesson">开始今天的 AI 教练课 →</button>
+</section>
+</section>
+<section id="course-panel" class="screen"><div class="head"><div><div class="eyebrow">MY COACHING SCHEDULE</div><h1>我的课程</h1><p class="course-sub">从雅思口语工作台推送过来的题，都会在这里变成一节待练的 AI 教练课。</p></div><div class="plan" id="course-plan-label">30 课时稳定表达包</div></div><article class="pushed-course"><div><div class="course-source">来自雅思口语工作台 · 已推送</div><h2>Why do people prefer living in big cities?</h2><p>带练目标：把两个核心原因练到能够无提示说出来。</p><div class="course-meta"><span>Part 3</span><span>约 20 分钟</span><span>需要开口 5 次</span></div></div><button class="course-start">开始这节 AI 教练课 →</button></article><div class="course-footnote">每推送一道新题，会占用 1 课时；同一题的重复练习不额外扣课时。</div></section>
+<section id="records-panel" class="screen"><div class="head"><div><div class="eyebrow">PRACTICE HISTORY</div><h1>练习记录</h1><p class="course-sub">只保留最近练过的题和当前状态。</p></div></div><section class="record-list"><div class="record"><div class="record-icon">✓</div><div><b>Part 1 · What is your major?</b><small>昨天 · 完成无提示表达</small></div><span>已完成</span></div><div class="record"><div class="record-icon">↻</div><div><b>Part 1 · Hometown</b><small>8 月 4 日 · 第 3 天复习</small></div><span>已复习</span></div><div class="record"><div class="record-icon">Ⅱ</div><div><b>Part 2 · A helpful person</b><small>8 月 3 日 · 已保存至第 3 步</small></div><span>待继续</span></div></section></section>
+<section id="orders-panel" class="screen"><div class="head"><div><div class="eyebrow">PLAN & CREDITS</div><h1>订单与课时</h1><p class="course-sub">你的套餐、剩余课时和购买明细都在这里。</p></div></div><section class="order-detail"><div><div class="course-source">当前套餐</div><h2>30 课时稳定表达包</h2><p>购买于 2026 年 8 月 5 日 · 已完成 2 节</p></div><div class="credit"><b>28</b><span>/ 30 节剩余</span></div></section><p class="course-footnote">新题训练才扣课时；同一题的重复练习不额外扣课时。</p></section>
+</main>
+</section>
+<div id="export-controls" class="export-controls">
+<div>
+<button id="export-png" class="export-button">⇩ 导出 PNG</button>
+<p id="export-status" class="export-status">
+</p>
+</div>
+</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js">
+</script>
+<script>const profile=JSON.parse(localStorage.getItem('lindsey-ai-coach-demo-profile')||'null');if(profile){const v=profile.account||'我的账户';document.getElementById('account-name').textContent=v.length>4?v.slice(0,3)+'****'+v.slice(-2):v;document.getElementById('avatar').textContent=v.slice(0,1).toUpperCase();document.getElementById('plan-label').textContent=profile.plan}const titles={today:'今天，继续把这一题练透',courses:'我的课程',records:'练习记录',orders:'订单与课时'};document.querySelectorAll('[data-view],[data-view-target]').forEach(x=>x.onclick=()=>{const v=x.dataset.view||x.dataset.viewTarget;document.getElementById('page-title').textContent=titles[v];document.querySelectorAll('[data-view]').forEach(n=>n.classList.toggle('active',n.dataset.view===v))});document.getElementById('start-lesson').onclick=()=>{localStorage.setItem('lindsey-ai-coach-demo-progress',JSON.stringify({question:'Why do people prefer living in big cities?',step:1,startedAt:new Date().toISOString()}));document.getElementById('start-lesson').textContent='已保存本次开始时间，正在进入 AI 教练课…'};const b=document.getElementById('export-png'),a=document.getElementById('artboard'),s=document.getElementById('export-status');b.onclick=async()=>{b.disabled=true;s.textContent='正在生成 PNG…';try{await document.fonts.ready;const c=await html2canvas(a,{scale:1,backgroundColor:null,width:a.offsetWidth,height:a.offsetHeight,windowWidth:a.offsetWidth,windowHeight:a.offsetHeight,useCORS:true});const l=document.createElement('a');l.download='my-ai-coach-dashboard-v3.png';l.href=c.toDataURL('image/png');l.click();s.textContent=`已导出 ${c.width} × ${c.height} PNG`;}catch(e){s.textContent='导出失败：'+e.message}finally{b.disabled=false}};</script>
+<script>
+  const panels={today:document.getElementById('home-panel'),courses:document.getElementById('course-panel'),records:document.getElementById('records-panel'),orders:document.getElementById('orders-panel')};
+  document.querySelectorAll('[data-view]').forEach(btn=>btn.addEventListener('click',()=>{const view=btn.dataset.view;Object.entries(panels).forEach(([key,panel])=>panel.classList.toggle('active',key===view));if(view==='courses')document.getElementById('course-plan-label').textContent=document.getElementById('plan-label').textContent;}));
+  document.querySelector('.course-start').addEventListener('click',()=>{document.querySelector('.course-start').textContent='正在进入 AI 教练课…';});
+</script>
+</body>
+</html>

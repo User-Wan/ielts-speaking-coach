@@ -1,0 +1,254 @@
+openapi: 3.1.0
+info:
+  title: Lindsey AI Coach API
+  version: 0.1.0-draft
+  description: First-stage contract for authentication-aware courses and resumable training sessions.
+servers:
+  - url: /api
+paths:
+  /me:
+    get:
+      summary: Get the signed-in user
+      responses:
+        "200":
+          description: Current user
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+  /courses:
+    get:
+      summary: List courses owned by the signed-in user
+      responses:
+        "200":
+          description: Course list
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Course"
+  /courses/{courseId}:
+    get:
+      summary: Get one course
+      parameters:
+        - $ref: "#/components/parameters/CourseId"
+      responses:
+        "200":
+          description: Course
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Course"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /sessions:
+    post:
+      summary: Create a training session
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [courseId]
+              properties:
+                courseId:
+                  type: string
+      responses:
+        "201":
+          description: Session created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TrainingSession"
+  /sessions/{sessionId}:
+    get:
+      summary: Get a resumable training session
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      responses:
+        "200":
+          description: Session
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TrainingSession"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /sessions/{sessionId}/progress:
+    patch:
+      summary: Save extensible session progress
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [currentStepKey, progressData]
+              properties:
+                currentStepKey:
+                  type: string
+                progressData:
+                  type: object
+                  additionalProperties: true
+      responses:
+        "200":
+          description: Progress saved
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TrainingSession"
+  /sessions/{sessionId}/turns:
+    post:
+      summary: Submit one learner turn and receive a coach turn
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TurnRequest"
+      responses:
+        "201":
+          description: Learner turn processed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TurnResponse"
+  /sessions/{sessionId}/pause:
+    post:
+      summary: Pause and persist a session
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      responses:
+        "200":
+          description: Session paused
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TrainingSession"
+  /sessions/{sessionId}/complete:
+    post:
+      summary: Complete a session
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      responses:
+        "200":
+          description: Session completed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TrainingSession"
+components:
+  parameters:
+    CourseId:
+      name: courseId
+      in: path
+      required: true
+      schema:
+        type: string
+    SessionId:
+      name: sessionId
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    Unauthorized:
+      description: Authentication required
+    NotFound:
+      description: Resource not found or not owned by the current user
+  schemas:
+    User:
+      type: object
+      required: [id, displayName]
+      properties:
+        id:
+          type: string
+        displayName:
+          type: string
+        email:
+          type: [string, "null"]
+    Course:
+      type: object
+      required: [id, title, part, question, status]
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        part:
+          type: string
+          enum: [Part 1, Part 2, Part 3]
+        question:
+          type: string
+        trainingGoal:
+          type: string
+        status:
+          type: string
+          enum: [not_started, in_progress, completed]
+        latestSessionId:
+          type: [string, "null"]
+    TrainingSession:
+      type: object
+      required: [id, courseId, status, currentStepKey, progressData, updatedAt]
+      properties:
+        id:
+          type: string
+        courseId:
+          type: string
+        status:
+          type: string
+          enum: [active, paused, completed, failed]
+        currentStepKey:
+          type: string
+        progressData:
+          type: object
+          additionalProperties: true
+        updatedAt:
+          type: string
+          format: date-time
+    TurnRequest:
+      type: object
+      required: [inputType, stepKey, clientRequestId]
+      properties:
+        inputType:
+          type: string
+          enum: [text, audio]
+        text:
+          type: string
+        audioObjectKey:
+          type: string
+        stepKey:
+          type: string
+        clientRequestId:
+          type: string
+    TurnResponse:
+      type: object
+      required: [turnId, transcript, coachReply, feedback, nextStepKey, sessionStatus]
+      properties:
+        turnId:
+          type: string
+        transcript:
+          type: string
+        coachReply:
+          type: string
+        feedback:
+          type: object
+          additionalProperties: true
+        nextStepKey:
+          type: string
+        sessionStatus:
+          type: string
+          enum: [active, paused, completed, failed]
+

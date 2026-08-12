@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>蓝莓写作工具｜官方入口</title>
+  <style>
+    :root { --artboard-width: 1242px; --artboard-height: 1660px; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body { background: #edf3ff; font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; }
+    .workspace { width: max-content; margin: 40px auto 64px; }
+    #artboard { position: relative; isolation: isolate; overflow: hidden; width: var(--artboard-width); height: var(--artboard-height); color: #17295a; background: #f7fbff; }
+    .orb { position: absolute; border-radius: 50%; filter: blur(1px); }
+    .orb.one { width: 700px; height: 700px; background: #d9e9ff; top: -300px; right: -210px; }
+    .orb.two { width: 560px; height: 560px; background: #e5dfff; left: -300px; bottom: -170px; }
+    .mesh { position: absolute; inset: 0; opacity: .45; background-image: radial-gradient(#8ea8d6 1px, transparent 1px); background-size: 27px 27px; mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 79%, transparent); }
+    .frame { position: absolute; inset: 62px; border: 2px solid rgba(37, 79, 159, .15); border-radius: 42px; }
+    .content { position: relative; height: 100%; padding: 148px 130px 126px; display: flex; flex-direction: column; }
+    .tag { display: inline-flex; align-self: flex-start; align-items: center; gap: 12px; border-radius: 99px; padding: 15px 22px; color: #2558b9; background: #e4efff; font-size: 25px; font-weight: 800; letter-spacing: 1px; }
+    .tag i { width: 12px; height: 12px; background: #4a74e8; border-radius: 50%; }
+    h1 { margin: 56px 0 26px; font-size: 96px; line-height: 1.12; letter-spacing: -5px; }
+    .sub { margin: 0; max-width: 790px; color: #526787; font-size: 35px; line-height: 1.65; letter-spacing: 1px; }
+    .cards { display: flex; gap: 20px; margin-top: 98px; }
+    .card { width: 31%; min-height: 205px; padding: 30px 25px; border: 1.5px solid rgba(50, 101, 195, .18); border-radius: 26px; background: rgba(255,255,255,.75); box-shadow: 0 16px 38px rgba(35,83,163,.08); }
+    .num { color: #416cdb; font: 800 34px/1 Georgia, serif; }
+    .card p { margin: 22px 0 0; font-size: 26px; font-weight: 700; line-height: 1.35; }
+    .desk { position: relative; flex: 1; min-height: 400px; margin-top: 90px; }
+    .paper { position: absolute; left: 94px; bottom: 0; width: 615px; height: 390px; padding: 60px 54px; transform: rotate(-5deg); border-radius: 20px; background: #fff; box-shadow: 0 28px 60px rgba(39,77,142,.20); }
+    .paper b { display: block; font-size: 35px; letter-spacing: 1px; }
+    .paper span { display: block; width: 88%; height: 16px; margin-top: 26px; border-radius: 100px; background: #dce7fb; }
+    .paper span:nth-of-type(2) { width: 68%; }
+    .blueberry { position: absolute; right: 55px; bottom: 58px; width: 255px; height: 255px; border-radius: 50%; background: radial-gradient(circle at 35% 28%, #9aabff 0 7%, transparent 8%), radial-gradient(circle at 46% 38%, #6775d8 0 12%, transparent 13%), radial-gradient(circle at 68% 67%, #4451a6 0 17%, transparent 18%), radial-gradient(circle at 30% 73%, #5662be 0 18%, transparent 19%), #7784e6; box-shadow: inset -25px -28px 34px rgba(28,39,116,.22), 0 28px 45px rgba(53,70,162,.2); }
+    .leaf { position: absolute; right: 77px; bottom: 261px; width: 85px; height: 50px; border-radius: 100% 0 100% 0; transform: rotate(15deg); background: #75bb8c; }
+    .leaf.two { right: 151px; transform: rotate(75deg); background: #60a97b; }
+    .entry { position: relative; margin-top: 52px; padding: 42px 46px; border-radius: 32px; color: #fff; background: #234ec8; box-shadow: 0 22px 43px rgba(35,78,200,.26); }
+    .entry small { display: block; color: #bfcfff; font-size: 22px; font-weight: 700; letter-spacing: 2px; }
+    .url { margin-top: 15px; font-family: Arial, sans-serif; font-size: 37px; font-weight: 800; letter-spacing: .3px; }
+    .entry::after { content: "↗"; position: absolute; right: 45px; top: 54px; font: 400 60px/1 Arial; color: #dce7ff; }
+    .footer { margin-top: 30px; text-align: center; color: #7285a7; font-size: 21px; letter-spacing: 1px; }
+    #export-controls { display: flex; justify-content: center; margin-top: 22px; }
+    .export-button { appearance: none; border: 0; border-radius: 999px; padding: 14px 24px; background: #1947c6; color: #fff; font: 700 16px/1 "Microsoft YaHei", sans-serif; cursor: pointer; box-shadow: 0 8px 22px rgba(25,71,198,.22); }
+    .export-button:disabled { cursor: wait; opacity: .65; }
+    .export-status { min-height: 20px; margin: 10px 0 0; color: #3d4c66; text-align: center; font: 13px "Microsoft YaHei", sans-serif; }
+  </style>
+</head>
+<body>
+  <main class="workspace">
+    <section id="artboard" aria-label="蓝莓写作工具官网入口海报">
+      <div class="orb one"></div><div class="orb two"></div><div class="mesh"></div><div class="frame"></div>
+      <div class="content">
+        <div class="tag"><i></i>写作工具 · 官方入口</div>
+        <h1>把想法，<br>好好写出来。</h1>
+        <p class="sub">一个安静、清爽的写作空间。适合把零散灵感，慢慢整理成自己的文字。</p>
+        <div class="cards"><div class="card"><div class="num">01</div><p>收集灵感</p></div><div class="card"><div class="num">02</div><p>整理思路</p></div><div class="card"><div class="num">03</div><p>完成表达</p></div></div>
+        <div class="desk"><div class="paper"><b>今天，想写点什么？</b><span></span><span></span></div><div class="leaf"></div><div class="leaf two"></div><div class="blueberry"></div></div>
+        <div class="entry"><small>官网入口</small><div class="url">tools.blueberrywriting.com</div></div>
+        <div class="footer">请通过浏览器访问 · 官方网站</div>
+      </div>
+    </section>
+    <div id="export-controls"><div><button id="export-png" class="export-button" type="button">⇩ 导出 PNG</button><p id="export-status" class="export-status" aria-live="polite"></p></div></div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script>
+    const button = document.getElementById('export-png'); const status = document.getElementById('export-status'); const artboard = document.getElementById('artboard');
+    button.addEventListener('click', async () => { button.disabled = true; status.textContent = '正在生成 PNG…'; try { if (!window.html2canvas) throw new Error('PNG 导出组件未加载，请联网后刷新页面。'); await document.fonts.ready; const canvas = await html2canvas(artboard, { backgroundColor: null, scale: 1, logging: false, width: artboard.offsetWidth, height: artboard.offsetHeight, windowWidth: artboard.offsetWidth, windowHeight: artboard.offsetHeight }); const link = document.createElement('a'); link.download = 'blueberrywriting-official-entry-v1.png'; link.href = canvas.toDataURL('image/png'); link.click(); status.textContent = `已导出 ${canvas.width} × ${canvas.height} PNG`; } catch (error) { status.textContent = `导出失败：${error.message}`; } finally { button.disabled = false; } });
+  </script>
+</body>
+</html>

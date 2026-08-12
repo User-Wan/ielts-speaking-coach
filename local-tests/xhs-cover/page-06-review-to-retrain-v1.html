@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>小红书第6页｜复盘到复训｜V1</title>
+  <style>
+    :root {
+      --artboard-width: 1242px;
+      --artboard-height: 1660px;
+      --page-bg: #e7e7eb;
+      --paper: #f5f5f7;
+      --surface: #ffffff;
+      --ink: #18181b;
+      --muted: #6f6f77;
+      --line: #dedee5;
+      --purple: #5547b5;
+      --purple-dark: #292244;
+      --purple-soft: #eeebff;
+      --green: #48aa77;
+      --blue: #3272de;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background: var(--page-bg);
+      color: var(--ink);
+      font-family: Inter, "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+    }
+    .workspace { width: max-content; margin: 38px auto 64px; }
+    .artboard {
+      position: relative;
+      width: var(--artboard-width);
+      height: var(--artboard-height);
+      overflow: hidden;
+      padding: 52px 72px 46px;
+      background: var(--paper);
+      isolation: isolate;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 17px;
+      border-bottom: 2px solid var(--line);
+      color: var(--purple);
+      font-size: 16px;
+      font-weight: 850;
+      letter-spacing: .14em;
+    }
+    .eyebrow span:last-child {
+      color: #8c8c94;
+      font-family: ui-monospace, Consolas, monospace;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .title-block { margin-top: 27px; }
+    h1 {
+      margin: 0;
+      font-size: 63px;
+      line-height: 1.14;
+      letter-spacing: -.028em;
+      font-weight: 880;
+    }
+    h1 span { display: block; white-space: nowrap; }
+    h1 .accent { color: var(--purple); }
+    .support {
+      max-width: 1050px;
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 22px;
+      line-height: 1.48;
+      font-weight: 650;
+    }
+
+    .capability-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .capability-row span {
+      padding: 11px 18px;
+      border: 1.5px solid #ddd9f5;
+      border-radius: 999px;
+      background: var(--purple-soft);
+      color: #4e429f;
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 780;
+      white-space: nowrap;
+    }
+
+    .report-proof { margin-top: 22px; }
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 840;
+    }
+    .section-title b {
+      display: grid;
+      place-items: center;
+      width: 37px;
+      height: 37px;
+      border-radius: 10px;
+      background: var(--purple-soft);
+      color: var(--purple);
+      font: 850 15px/1 ui-monospace, Consolas, monospace;
+    }
+    .section-note {
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 650;
+    }
+    figure { margin: 0; }
+    .report-frame {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 550px;
+      overflow: hidden;
+      border: 2px solid #dbdae5;
+      border-radius: 23px;
+      background: #fff;
+      box-shadow: 0 18px 40px rgba(40, 37, 66, .12);
+    }
+    .report-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center center;
+    }
+
+    .retrain-proof {
+      margin-top: 22px;
+    }
+    .retrain-frame {
+      height: 355px;
+      overflow: hidden;
+      border: 2px solid #dbdae5;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 15px 32px rgba(40, 37, 66, .1);
+    }
+    .retrain-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 52%;
+    }
+
+    .retrain-line {
+      display: grid;
+      grid-template-columns: 1fr 43px 1fr 43px 1fr;
+      align-items: center;
+      margin-top: 20px;
+      padding: 19px 20px;
+      border-radius: 21px;
+      background: var(--purple-dark);
+      color: #fff;
+    }
+    .retrain-step {
+      text-align: center;
+      font-size: 23px;
+      line-height: 1.25;
+      font-weight: 820;
+      white-space: nowrap;
+    }
+    .retrain-arrow {
+      color: #bcb3f5;
+      text-align: center;
+      font-size: 27px;
+      font-weight: 800;
+    }
+    .conclusion {
+      margin: 14px 0 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 19px;
+      line-height: 1.42;
+      font-weight: 720;
+    }
+    .conclusion strong { color: var(--ink); font-weight: 840; }
+
+    .page-no {
+      position: absolute;
+      right: 72px;
+      bottom: 22px;
+      color: #92929a;
+      font: 750 15px/1 ui-monospace, Consolas, monospace;
+      letter-spacing: .12em;
+    }
+    .export-controls { display: flex; justify-content: center; margin-top: 22px; }
+    .export-button {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 24px;
+      background: var(--blue);
+      color: #fff;
+      font: 800 16px/1 Inter, "Microsoft YaHei", sans-serif;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(50, 114, 222, .24);
+    }
+    .export-button:disabled { cursor: wait; opacity: .65; }
+    .export-status { min-height: 20px; margin: 10px 0 0; color: #4d4d55; text-align: center; font-size: 13px; }
+    body.render-mode { overflow: hidden; background: transparent; }
+    body.render-mode .workspace { margin: 0; }
+    body.render-mode .export-controls { display: none; }
+  </style>
+</head>
+<body>
+  <main class="workspace">
+    <section id="artboard" class="artboard" aria-label="小红书第6页复盘到复训画布">
+      <div class="eyebrow"><span>03 · REVIEW TO RETRAIN</span><span>IELTS SPEAKING COACH</span></div>
+
+      <header class="title-block">
+        <h1>
+          <span>复盘不是看完就结束，</span>
+          <span class="accent">它要帮你知道下一次怎么练</span>
+        </h1>
+        <p class="support">报告回到你真正说过的话：哪里需要纠正，哪里可以表达得更自然，哪些习惯正在反复出现。</p>
+        <div class="capability-row" aria-label="完整报告包含的核心能力">
+          <span>多维纠错与表达升级</span><span>高分建议答案</span><span>带着本题进入复训</span>
+        </div>
+      </header>
+
+      <section class="report-proof" aria-label="完整复盘报告真实截图">
+        <div class="section-head">
+          <div class="section-title"><b>01</b><span>一份报告里，看清问题，也拿到下一目标</span></div>
+          <span class="section-note">真实产品报告</span>
+        </div>
+        <figure class="report-frame">
+          <img src="assets/page-06/report-overview.png" alt="IELTS Speaking Coach 完整复盘报告，左侧为表达纠正，右侧为下一单目标和高分建议答案" />
+        </figure>
+      </section>
+
+      <section class="retrain-proof" aria-label="单目标复训真实截图">
+        <div class="section-head">
+          <div class="section-title"><b>02</b><span>从报告抽出一个问题，带着本题进入复训</span></div>
+          <span class="section-note">单目标复训</span>
+        </div>
+        <figure class="retrain-frame">
+          <img src="../xhs-feature-screenshots/output/04-single-target-retrain.png" alt="IELTS Speaking Coach 单目标复训真实截图" />
+        </figure>
+      </section>
+
+      <section class="retrain-line" aria-label="从复盘到单目标复训">
+        <div class="retrain-step">完整复盘报告</div>
+        <div class="retrain-arrow">→</div>
+        <div class="retrain-step">单目标复训</div>
+        <div class="retrain-arrow">→</div>
+        <div class="retrain-step">换一道题<br>再次验证</div>
+      </section>
+      <p class="conclusion">一次只解决一个目标，再换题验证，才知道是<strong>真的会了</strong>，还是只记住了答案。</p>
+
+      <div class="page-no">06 / REVIEW TO RETRAIN</div>
+    </section>
+
+    <div id="export-controls" class="export-controls">
+      <div>
+        <button id="export-png" class="export-button" type="button">⇩ 导出 PNG</button>
+        <p id="export-status" class="export-status" aria-live="polite"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script>
+    if (new URLSearchParams(location.search).get('render') === '1') {
+      document.body.classList.add('render-mode');
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      window.scrollTo(0, 0);
+    }
+    const button = document.getElementById('export-png');
+    const status = document.getElementById('export-status');
+    const artboard = document.getElementById('artboard');
+    async function waitForImages(root) {
+      const images = [...root.querySelectorAll('img')];
+      await Promise.all(images.map((img) => {
+        if (img.complete && img.naturalWidth > 0) return Promise.resolve();
+        return new Promise((resolve, reject) => {
+          img.addEventListener('load', resolve, { once: true });
+          img.addEventListener('error', () => reject(new Error(`图片加载失败：${img.src}`)), { once: true });
+        });
+      }));
+    }
+    button.addEventListener('click', async () => {
+      button.disabled = true;
+      status.textContent = '正在生成 PNG…';
+      try {
+        if (!window.html2canvas) throw new Error('PNG 导出组件未加载，请联网后刷新页面');
+        await document.fonts.ready;
+        await waitForImages(artboard);
+        const canvas = await html2canvas(artboard, {
+          backgroundColor: null,
+          scale: 1,
+          useCORS: true,
+          logging: false,
+          width: 1242,
+          height: 1660,
+          windowWidth: 1242,
+          windowHeight: 1660
+        });
+        const link = document.createElement('a');
+        link.download = 'xhs-page-06-review-to-retrain-v1.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        status.textContent = `已导出 ${canvas.width} × ${canvas.height} PNG`;
+      } catch (error) {
+        status.textContent = `导出失败：${error.message}`;
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

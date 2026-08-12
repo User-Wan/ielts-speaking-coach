@@ -1,5 +1,7 @@
 # Contributing
 
+[English](CONTRIBUTING.md) | [简体中文](CONTRIBUTING.zh-CN.md)
+
 Issues and pull requests are welcome.
 
 1. Create a branch from `main`.

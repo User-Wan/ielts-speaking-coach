@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>小红书第3页｜功能地图｜V1</title>
+  <style>
+    :root {
+      --artboard-width: 1242px;
+      --artboard-height: 1660px;
+      --page-bg: #e7e7eb;
+      --paper: #f5f5f7;
+      --surface: #ffffff;
+      --ink: #18181b;
+      --muted: #6f6f77;
+      --line: #dedee5;
+      --purple: #5547b5;
+      --purple-soft: #eeebff;
+      --blue: #3272de;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background: var(--page-bg);
+      color: var(--ink);
+      font-family: Inter, "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+    }
+
+    .workspace { width: max-content; margin: 38px auto 64px; }
+    .artboard {
+      position: relative;
+      width: var(--artboard-width);
+      height: var(--artboard-height);
+      overflow: hidden;
+      padding: 52px 72px 48px;
+      background: var(--paper);
+      isolation: isolate;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      border-bottom: 2px solid var(--line);
+      color: var(--purple);
+      font-size: 16px;
+      font-weight: 850;
+      letter-spacing: .14em;
+    }
+    .eyebrow span:last-child {
+      color: #8c8c94;
+      font-family: ui-monospace, Consolas, monospace;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .title-block { margin-top: 34px; }
+    h1 {
+      width: 100%;
+      margin: 0;
+      font-size: 70px;
+      line-height: 1.14;
+      letter-spacing: -.025em;
+      font-weight: 880;
+    }
+    h1 span { display: block; white-space: nowrap; }
+    h1 .accent { color: var(--purple); }
+    .subtitle {
+      margin: 21px 0 0;
+      color: var(--muted);
+      font-size: 26px;
+      line-height: 1.48;
+      font-weight: 650;
+    }
+    .subtitle span { display: block; }
+
+    .map-section { margin-top: 42px; }
+    .map-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--line);
+      color: var(--purple);
+      font-size: 15px;
+      font-weight: 850;
+      letter-spacing: .12em;
+    }
+    .map-meta span:last-child {
+      color: #92929a;
+      font-family: ui-monospace, Consolas, monospace;
+      letter-spacing: .08em;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+    .feature-card {
+      position: relative;
+      min-height: 248px;
+      overflow: hidden;
+      padding: 28px 30px 27px;
+      border: 2px solid #e3e2e9;
+      border-radius: 22px;
+      background: var(--surface);
+      box-shadow: 0 12px 28px rgba(40, 37, 66, .07);
+    }
+    .feature-card:nth-child(2),
+    .feature-card:nth-child(5) {
+      border-color: #ddd8fb;
+      background: var(--purple-soft);
+    }
+    .feature-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 28px;
+      width: 84px;
+      height: 5px;
+      border-radius: 0 0 99px 99px;
+      background: var(--purple);
+    }
+    .feature-number {
+      color: var(--purple);
+      font: 850 18px/1 ui-monospace, Consolas, monospace;
+      letter-spacing: .08em;
+    }
+    .feature-card h2 {
+      margin: 24px 0 0;
+      font-size: 32px;
+      line-height: 1.25;
+      letter-spacing: -.015em;
+      font-weight: 850;
+    }
+    .feature-card p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 23px;
+      line-height: 1.48;
+      font-weight: 600;
+    }
+
+    .footer-note {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin-top: 34px;
+      padding: 25px 0 0;
+      border-top: 2px solid var(--line);
+      font-size: 30px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+    .footer-note::before {
+      content: "";
+      flex: 0 0 auto;
+      width: 9px;
+      height: 48px;
+      border-radius: 99px;
+      background: var(--purple);
+    }
+
+    .page-no {
+      position: absolute;
+      right: 72px;
+      bottom: 23px;
+      color: #92929a;
+      font: 750 15px/1 ui-monospace, Consolas, monospace;
+      letter-spacing: .12em;
+    }
+
+    .export-controls { display: flex; justify-content: center; margin-top: 22px; }
+    .export-button {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 24px;
+      background: var(--blue);
+      color: #fff;
+      font: 800 16px/1 Inter, "Microsoft YaHei", sans-serif;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(50, 114, 222, .24);
+    }
+    .export-button:disabled { cursor: wait; opacity: .65; }
+    .export-status { min-height: 20px; margin: 10px 0 0; color: #4d4d55; text-align: center; font-size: 13px; }
+    body.render-mode { overflow: hidden; background: transparent; }
+    body.render-mode .workspace { margin: 0; }
+    body.render-mode .export-controls { display: none; }
+  </style>
+</head>
+<body>
+  <main class="workspace">
+    <section id="artboard" class="artboard" aria-label="小红书第3页功能地图画布">
+      <div class="eyebrow"><span>WORKSPACE · FEATURE MAP</span><span>IELTS SPEAKING COACH</span></div>
+
+      <header class="title-block">
+        <h1>
+          <span>它不是一个提示词，</span>
+          <span class="accent">是一整套口语练习工作台</span>
+        </h1>
+        <p class="subtitle">
+          <span>从“今天练什么”，到“这个问题有没有真的改掉”，</span>
+          <span>练习过程都留在同一个地方。</span>
+        </p>
+      </header>
+
+      <section class="map-section" aria-label="六个功能模块">
+        <div class="map-meta"><span>SIX CONNECTED MODULES</span><span>FROM PRACTICE TO REVIEW</span></div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-number">01</div>
+            <h2>选题与学习计划</h2>
+            <p>不用每次从头想今天练什么。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-number">02</div>
+            <h2>ChatGPT Voice 模拟</h2>
+            <p>打开就能按雅思口语的方式开始练。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-number">03</div>
+            <h2>基于真实回答的复盘</h2>
+            <p>回到你真正说过的话，而不是空泛点评。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-number">04</div>
+            <h2>单目标专项复训</h2>
+            <p>一次只解决一个问题，再换题验证。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-number">05</div>
+            <h2>问题与词汇档案</h2>
+            <p>把反复出现的问题和能用的词留下来。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-number">06</div>
+            <h2>长期训练记录</h2>
+            <p>看见练过什么，也看见问题有没有变少。</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="footer-note">后面，我会把每个功能拆开讲。</div>
+      <div class="page-no">03 / FEATURE MAP</div>
+    </section>
+
+    <div id="export-controls" class="export-controls">
+      <div>
+        <button id="export-png" class="export-button" type="button">⇩ 导出 PNG</button>
+        <p id="export-status" class="export-status" aria-live="polite"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script>
+    if (new URLSearchParams(location.search).get('render') === '1') {
+      document.body.classList.add('render-mode');
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      window.scrollTo(0, 0);
+    }
+
+    const button = document.getElementById('export-png');
+    const status = document.getElementById('export-status');
+    const artboard = document.getElementById('artboard');
+
+    async function waitForImages(root) {
+      const images = [...root.querySelectorAll('img')];
+      await Promise.all(images.map((img) => {
+        if (img.complete && img.naturalWidth > 0) return Promise.resolve();
+        return new Promise((resolve, reject) => {
+          img.addEventListener('load', resolve, { once: true });
+          img.addEventListener('error', () => reject(new Error(`图片加载失败：${img.src}`)), { once: true });
+        });
+      }));
+    }
+
+    button.addEventListener('click', async () => {
+      button.disabled = true;
+      status.textContent = '正在生成 PNG…';
+      try {
+        if (!window.html2canvas) throw new Error('PNG 导出组件未加载，请联网后刷新页面');
+        await document.fonts.ready;
+        await waitForImages(artboard);
+        const canvas = await html2canvas(artboard, {
+          backgroundColor: null,
+          scale: 1,
+          useCORS: true,
+          logging: false,
+          width: 1242,
+          height: 1660,
+          windowWidth: 1242,
+          windowHeight: 1660
+        });
+        const link = document.createElement('a');
+        link.download = 'xhs-page-03-feature-map-v1.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        status.textContent = `已导出 ${canvas.width} × ${canvas.height} PNG`;
+      } catch (error) {
+        status.textContent = `导出失败：${error.message}`;
+      } finally {
+        button.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

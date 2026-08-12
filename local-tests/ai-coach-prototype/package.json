@@ -1,0 +1,13 @@
+{
+  "name": "lindsey-ai-coach-realtime-voice",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node volc-realtime-bridge.mjs",
+    "test": "node --test *.test.mjs",
+    "test:live": "node realtime-live-smoke.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  }
+}
