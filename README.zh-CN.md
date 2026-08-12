@@ -104,6 +104,8 @@ npm run desktop
 
 应用会打开桌面窗口。请在独立的 ChatGPT 窗口中自行登录，选择训练入口和题目，再通过界面按钮开始和结束 Voice 训练。只有在复盘同步后，本地桥接才会保存结构化复盘数据。
 
+Windows 用户也可以双击 [`start-ielts-speaking-coach.cmd`](start-ielts-speaking-coach.cmd) 启动。启动器会检查 Node.js、自动安装缺少的依赖，并使用独立的 Electron 运行目录减少旧用户数据锁和启动冲突；如果启动失败，命令窗口会保留错误信息。
+
 也可以直接打开 `demo/dashboard.html` 查看静态示例页面。示例使用虚构数据，不会访问你的个人学习目录。
 
 ## 测试

@@ -104,6 +104,8 @@ npm run desktop
 
 The dashboard opens as a desktop window. Sign in to ChatGPT yourself in the separate ChatGPT window, select a route and question, then start and end the Voice session through the visible controls. The local bridge saves structured review data only after the review is synchronized.
 
+On Windows, you can also double-click [`start-ielts-speaking-coach.cmd`](start-ielts-speaking-coach.cmd). The launcher checks Node.js, installs missing dependencies, uses an isolated Electron runtime directory to avoid stale profile locks, and keeps the console open when startup fails.
+
 For a static sample dashboard, open `demo/dashboard.html` directly in a browser. It uses fictional data and does not access your personal learning storage.
 
 ## Tests
