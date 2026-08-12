@@ -9,9 +9,10 @@ const [dashboard, template, preload, main] = await Promise.all([
 ])
 
 for (const html of [dashboard, template]) {
-  assert.match(html, />同步复盘报告<\/button>/)
-  assert.match(html, />补生成复盘报告<\/button>/)
-  assert.doesNotMatch(html, />结束并生成复盘<\/button>/)
+  assert.match(html, /id=["']recover-review["']/)
+  assert.match(html, /id=["']copy-review-prompt["']/)
+  assert.match(html, /id=["']open-associated-conversation["']/)
+  assert.doesNotMatch(html, /结束并生成复盘/)
   assert.doesNotMatch(html, /重新同步报告/)
   const scripts = [...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/gi)]
   scripts.forEach((match) => new Function(match[1]))

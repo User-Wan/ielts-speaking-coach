@@ -10,6 +10,30 @@ recordings/
 reports/
 pending-reviews/
 state*.json
+Teacher Exports/
+app-profile/
+backups/
+trash/
+personal-materials/
+*.mp3
+*.wav
+*.webm
+
+# Browser profiles, caches, and local test state
+**/.chrome-*/
+**/.chrome-profile*/
+**/Cache/
+**/Code Cache/
+**/GPUCache/
+**/Network/
+**/Local Storage/
+**/Session Storage/
+**/Sessions/
+**/Cookies*
+**/Login Data*
+**/History*
+**/Preferences
+**/Secure Preferences
 
 # Local environment and credentials
 .env
@@ -20,6 +44,8 @@ state*.json
 .reference/
 outputs/
 demo/*.png
+demo/*.jpg
+demo/*.jpeg
 mcp/question-bank-2026-may-aug.json
 scripts/build-question-bank-from-ocr.mjs
 ocr-results*.json

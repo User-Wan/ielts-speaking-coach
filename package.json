@@ -1,6 +1,6 @@
 {
   "name": "ielts-speaking-coach-local-mcp",
-  "version": "0.1.50",
+  "version": "0.1.49",
   "private": true,
   "type": "module",
   "description": "Local MCP server for IELTS Speaking Coach practice state and review reports.",
@@ -17,7 +17,8 @@
     "test:review-parser": "node desktop/review-parser.test.mjs",
     "test:answer-policy": "node desktop/answer-upgrade-policy.test.mjs",
     "test:voice-end": "node desktop/voice-end-policy.test.mjs",
-    "test:review-controls": "node desktop/review-controls.test.mjs"
+    "test:review-controls": "node desktop/review-controls.test.mjs",
+    "migrate:recordings": "node mcp/migrate-recordings-to-mp3.mjs"
   },
   "main": "desktop/main.mjs",
   "build": {
@@ -26,6 +27,9 @@
     "directories": {
       "output": "release"
     },
+    "asarUnpack": [
+      "node_modules/@ffmpeg-installer/win32-x64/ffmpeg.exe"
+    ],
     "files": [
       "desktop/**",
       "demo/dashboard.html",
@@ -74,6 +78,7 @@
     }
   },
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@modelcontextprotocol/sdk": "^1.17.5",
     "jsonrepair": "^3.15.0",
     "zod": "^3.25.76"

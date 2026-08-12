@@ -1,0 +1,42 @@
+{
+  "demoOnly": true,
+  "note": "Synthetic portfolio fixture. Not a learner record and not intended for production storage.",
+  "session": {
+    "id": "demo-session-group-work-001",
+    "part": "Part 2&3",
+    "topic": "A time when you worked in a group",
+    "startedAt": "2026-01-15T09:30:00.000Z",
+    "durationSeconds": 1240,
+    "questions": [
+      "Describe a time when you worked in a group.",
+      "Why do some people prefer to work by themselves?",
+      "What should a leader do to make team members want to follow them?"
+    ],
+    "transcript": [
+      {
+        "role": "user",
+        "text": "I worked with three classmates on a small software project. We divided the tasks, met twice a week, and solved a problem together before the deadline."
+      }
+    ],
+    "scoreAssessment": {
+      "status": "practice-reference",
+      "overall": null,
+      "fluencyAndCoherence": "5.5",
+      "lexicalResource": "5.5",
+      "grammarRangeAndAccuracy": "5.0",
+      "pronunciation": null,
+      "evidenceNote": "Synthetic text-only evidence. Pronunciation is not scored without accessible audio."
+    },
+    "aiSummary": "The response has a clear group-work example. The next goal is to use a shorter answer structure: direct answer, reason, example, result.",
+    "mustCorrect": [
+      "work as part of a team",
+      "delegate tasks"
+    ],
+    "moreNaturalExpressions": [
+      "a broad overview",
+      "real-world use"
+    ],
+    "nextTrainingGoal": "Answer one Part 3 question with a clear reason and concrete example.",
+    "recordingAttachment": "sample-speaking-session.mp3"
+  }
+}
