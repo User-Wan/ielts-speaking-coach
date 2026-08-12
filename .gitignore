@@ -46,6 +46,7 @@ outputs/
 demo/*.png
 demo/*.jpg
 demo/*.jpeg
+demo/blueberrywriting-official-entry-v1.html
 mcp/question-bank-2026-may-aug.json
 scripts/build-question-bank-from-ocr.mjs
 ocr-results*.json
