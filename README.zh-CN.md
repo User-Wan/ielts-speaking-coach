@@ -10,6 +10,12 @@ IELTS Speaking Coach 是一个本地优先的雅思口语桌面训练工具，�
 
 `Local-first` · `Electron` · `Part 1 / 2 / 3` · `P2 + P3` · `结构化复盘`
 
+### 试用公开演示页
+
+你可以打开[只读 GitHub Pages 演示页](https://user-wan.github.io/ielts-speaking-coach/)查看产品流程和界面。演示页只使用虚构样例数据；ChatGPT、录音、保存、同步和教师资料导出仍然属于桌面版能力，公开网页不会读取学习者本机数据。
+
+[本地运行](#快速开始) · [查看源代码](https://github.com/User-Wan/ielts-speaking-coach)
+
 ## 这个项目怎样发展起来
 
 这个项目基于开源的 [lindsey-labs/ielts-speaking-coach](https://github.com/lindsey-labs/ielts-speaking-coach) 代码开始，并在我自己的学习和使用过程中持续开发和调整。上游项目和 MIT 许可证仍然是基础的一部分。
@@ -145,6 +151,8 @@ npm run desktop
 仪表盘会以桌面窗口打开。请在独立的 ChatGPT 窗口中自行登录，然后选择训练路线和题目，再使用界面按钮开始、结束和同步训练。也可以直接打开 [`demo/dashboard.html`](demo/dashboard.html) 查看静态示例；它使用演示数据，不读取个人学习档案。
 
 Windows 下也可以双击 [`start-ielts-speaking-coach.cmd`](start-ielts-speaking-coach.cmd) 启动。
+
+如果想在本机查看与公开网页相同的虚构样例数据，可以双击 [`start-ielts-speaking-coach-demo.cmd`](start-ielts-speaking-coach-demo.cmd)。它会使用 [`demo/sample-data.json`](demo/sample-data.json) 构建一个独立的只读 Demo，并在 `43129` 端口打开；不会读取或写入私人 `state.json`。真正进行训练时仍使用普通启动脚本。
 
 ## 测试
 

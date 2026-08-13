@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dataDir = await fs.mkdtemp(path.join(os.tmpdir(), 'ielts-speaking-desktop-test-'))
-const port = '43128'
+const port = process.env.IELTS_SPEAKING_DASHBOARD_TEST_PORT || '43128'
 const base = `http://127.0.0.1:${port}`
 const child = spawn(process.execPath, [path.join(root, 'mcp', 'server.mjs'), '--dashboard-only'], {
   cwd: root,

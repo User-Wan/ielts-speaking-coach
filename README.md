@@ -10,6 +10,12 @@ This is an early-stage project that I am developing while learning and practisin
 
 `Local-first` · `Electron` · `Part 1 / 2 / 3` · `P2 + P3` · `Structured review`
 
+### Try the public demo
+
+The [read-only GitHub Pages demo](https://user-wan.github.io/ielts-speaking-coach/) uses synthetic sample data to show the product flow and visual design. ChatGPT, recording, saving, synchronization and teacher export remain desktop-app features so the public page never touches a learner's local data.
+
+[Run locally](#getting-started) · [View the source](https://github.com/User-Wan/ielts-speaking-coach)
+
 ## How this fork evolved
 
 This project started from the open-source [lindsey-labs/ielts-speaking-coach](https://github.com/lindsey-labs/ielts-speaking-coach) codebase and has been continuously developed and adapted through my own learning workflow. The upstream project and its MIT license remain part of the foundation.
@@ -153,6 +159,8 @@ npm run desktop
 The dashboard opens as a desktop window. Sign in to ChatGPT yourself in the separate ChatGPT window, choose a route and question, then use the visible controls to start, finish and synchronize a session. The public static dashboard can also be opened directly at [`demo/dashboard.html`](demo/dashboard.html); it uses fictional data and does not access a personal learning workspace.
 
 On Windows, [`start-ielts-speaking-coach.cmd`](start-ielts-speaking-coach.cmd) provides a one-click launcher. It checks Node.js, installs missing dependencies and keeps the console visible when startup fails.
+
+To inspect the same fictional data used by the public page on your own machine, run [`start-ielts-speaking-coach-demo.cmd`](start-ielts-speaking-coach-demo.cmd). It opens a separate read-only local demo on port `43129`, builds from [`demo/sample-data.json`](demo/sample-data.json), and does not read or write the private `state.json`. Use the regular launcher for actual local practice.
 
 ## Tests
 

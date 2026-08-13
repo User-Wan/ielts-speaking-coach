@@ -1236,6 +1236,13 @@
     .history-score-legend .legend-fc::before { stroke: #ff6a32; background: #ff6a32; }
     .history-score-chart .lr-line,
     .history-score-legend .legend-lr::before { stroke: #4fa780; background: #4fa780; }
+    /* Public demo trend charts stay line-only; theme fills must never close a score line into an area. */
+    .history-score-chart .avg-line,
+    .history-score-chart .fc-line,
+    .history-score-chart .lr-line,
+    .history-score-chart .gra-line,
+    .history-score-chart .p-line,
+    .history-score-chart polyline { fill: none !important; }
     .target-hero,
     .plan-hero {
       background: linear-gradient(160deg, #1d5047, #153d37);

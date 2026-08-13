@@ -2,6 +2,7 @@
 node_modules/
 release/
 dist/
+_site/
 *.log
 
 # Local learner data and recordings
